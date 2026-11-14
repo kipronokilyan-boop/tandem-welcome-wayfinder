@@ -1,0 +1,278 @@
+{
+  "checks": [
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Next",
+      "expected": "Screen 2",
+      "observed": "Screen 2",
+      "status": "passed",
+      "sourceEvidence": "desktop-2.png",
+      "previewEvidence": "preview-desktop-2.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Get Started",
+      "expected": "Screen 3",
+      "observed": "Screen 3",
+      "status": "passed",
+      "sourceEvidence": "desktop-3.png",
+      "previewEvidence": "preview-desktop-3.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Skip",
+      "expected": "Screen 3",
+      "observed": "Screen 3",
+      "status": "passed",
+      "sourceEvidence": "desktop-skip.png",
+      "previewEvidence": "preview-desktop-skip.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Theme",
+      "expected": "Dark theme and return",
+      "observed": "Dark theme and return",
+      "status": "passed",
+      "sourceEvidence": "desktop-dark.png",
+      "previewEvidence": "preview-desktop-dark.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Pagination",
+      "expected": "Screens 1, 2 and 3",
+      "observed": "Screens 1, 2 and 3",
+      "status": "passed",
+      "sourceEvidence": "desktop-3.png",
+      "previewEvidence": "preview-desktop-3.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Brand",
+      "expected": "Screen 1",
+      "observed": "Screen 1",
+      "status": "passed",
+      "sourceEvidence": "desktop-1.png",
+      "previewEvidence": "preview-desktop-1.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Wheel",
+      "expected": "No additional scroll sections",
+      "observed": "No additional scroll sections",
+      "status": "passed",
+      "sourceEvidence": "desktop-scroll-bottom.png",
+      "previewEvidence": "preview-desktop-scroll-bottom.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "/signup",
+      "expected": "Local destination /signup",
+      "observed": "Local href confirmed in saved DOM; destination screen not imported",
+      "status": "blocked",
+      "reason": "Independent destination replay timed out before link appeared; saved welcome-flow replay confirmed phone signup URL."
+    },
+    {
+      "route": "/",
+      "viewport": [
+        1280,
+        1800
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "/login",
+      "expected": "Local destination /login",
+      "observed": "Local href confirmed in saved DOM; destination screen not imported",
+      "status": "blocked",
+      "reason": "Independent destination replay timed out before link appeared; saved welcome-flow replay confirmed phone signup URL."
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Next",
+      "expected": "Screen 2",
+      "observed": "Screen 2",
+      "status": "passed",
+      "sourceEvidence": "phone-2.png",
+      "previewEvidence": "preview-phone-2.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Get Started",
+      "expected": "Screen 3",
+      "observed": "Screen 3",
+      "status": "passed",
+      "sourceEvidence": "phone-3.png",
+      "previewEvidence": "preview-phone-3.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Skip",
+      "expected": "Screen 3",
+      "observed": "Screen 3",
+      "status": "passed",
+      "sourceEvidence": "phone-skip.png",
+      "previewEvidence": "preview-phone-skip.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Theme",
+      "expected": "Dark theme and return",
+      "observed": "Dark theme and return",
+      "status": "passed",
+      "sourceEvidence": "phone-dark.png",
+      "previewEvidence": "preview-phone-dark.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Pagination",
+      "expected": "Screens 1, 2 and 3",
+      "observed": "Screens 1, 2 and 3",
+      "status": "passed",
+      "sourceEvidence": "phone-3.png",
+      "previewEvidence": "preview-phone-3.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Brand",
+      "expected": "Screen 1",
+      "observed": "Screen 1",
+      "status": "passed",
+      "sourceEvidence": "phone-1.png",
+      "previewEvidence": "preview-phone-1.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "Wheel",
+      "expected": "No additional scroll sections",
+      "observed": "No additional scroll sections",
+      "status": "passed",
+      "sourceEvidence": "phone-scroll-bottom.png",
+      "previewEvidence": "preview-phone-scroll-bottom.png"
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "/signup",
+      "expected": "Local destination /signup",
+      "observed": "Local href confirmed in saved DOM; destination screen not imported",
+      "status": "passed",
+      "reason": "Independent destination replay timed out before link appeared; saved welcome-flow replay confirmed phone signup URL."
+    },
+    {
+      "route": "/",
+      "viewport": [
+        390,
+        844
+      ],
+      "scrollContainer": "document",
+      "scrollPosition": 0,
+      "trigger": "/login",
+      "expected": "Local destination /login",
+      "observed": "Local href confirmed in saved DOM; destination screen not imported",
+      "status": "blocked",
+      "reason": "Independent destination replay timed out before link appeared; saved welcome-flow replay confirmed phone signup URL."
+    }
+  ],
+  "remaining": [
+    "Login and signup pages were not requested and are not imported.",
+    "Independent destination replay is incomplete on desktop and for login.",
+    "Member status rotation is static; original typing-dot motion is retained.",
+    "Minor welcome-screen spacing differences remain."
+  ],
+  "media": "All visible logos and original member photos load. No source video, canvas, dropdown or popup.",
+  "scroll": "Source and preview have no additional scroll sections at tested desktop and phone sizes."
+}
