@@ -1,0 +1,50 @@
+{
+  "html": "<div class=\"landing-slide flex flex-1 flex-col justify-between [animation:0.32s_ease-out_0s_1_normal_none_running_slideFadeIn]\" data-tsd-source=\"/src/routes/index.tsx:38:29\"><div class=\"slide-top-content marketing-slide-1 flex flex-col gap-[0.85rem] [padding:0.5rem_0px_0.85rem]\" data-tsd-source=\"/src/routes/index.tsx:39:15\"><div class=\"hero-marketing-badge items-center flex gap-[0.85rem] [box-shadow:rgba(0,0,0,0.4)_0px_8px_24px]! [padding:0.85rem_1rem]\" data-tsd-source=\"/src/routes/index.tsx:40:17\"><div class=\"badge-logo-wrap items-center flex justify-center [box-shadow:rgba(124,58,237,0.15)_0px_4px_12px] [flex-shrink:0]\" data-tsd-source=\"/src/routes/index.tsx:41:19\"><img class=\"Amoriva-hero-icon block [max-width:100%]\" alt=\"Amoriva\" width=\"48\" height=\"48\" src=\"/site-assets/20d745d21dcfa2ed.png\" data-tsd-source=\"/src/routes/index.tsx:42:21\"></div><div class=\"badge-text-col\" data-tsd-source=\"/src/routes/index.tsx:44:19\"><span class=\"platform-tag block [font-size:0.725rem] [font-weight:800]! [letter-spacing:0.02em]\" data-tsd-source=\"/src/routes/index.tsx:45:21\">\ud83c\udf0d Global Cultural &amp; Language Exchange</span><h3 class=\"platform-name [font-size:1.15rem] [font-weight:900]! [margin:0.15rem_0px_0px]\" data-tsd-source=\"/src/routes/index.tsx:46:21\">Amoriva Official</h3></div></div><div class=\"marketing-features-grid flex flex-col gap-[0.65rem] [margin-top:0.25rem]\" data-tsd-source=\"/src/routes/index.tsx:49:17\"><div class=\"marketing-feature-card items-center flex [box-shadow:rgba(0,0,0,0.35)_0px_6px_18px]! [gap:0.75rem] [padding:0.75rem_0.85rem] [transition:transform_0.18s,border-color_0.18s]\" data-tsd-source=\"/src/routes/index.tsx:50:19\"><div class=\"feature-icon-box green-bg items-center flex justify-center [flex-shrink:0] [font-size:1.25rem]\" data-tsd-source=\"/src/routes/index.tsx:51:21\">\ud83d\udcac</div><div class=\"feature-text flex-1 [min-width:0px]\" data-tsd-source=\"/src/routes/index.tsx:52:21\"><strong data-tsd-source=\"/src/routes/index.tsx:53:23\">Practice Through Conversation</strong><p data-tsd-source=\"/src/routes/index.tsx:54:23\">Have meaningful conversations with people from different countries and practice languages naturally.</p></div><span class=\"feature-rate-pill whitespace-nowrap [font-size:0.7rem] [font-weight:800]! [padding:0.2rem_0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:56:21\">Language</span></div><div class=\"marketing-feature-card items-center flex [box-shadow:rgba(0,0,0,0.35)_0px_6px_18px]! [gap:0.75rem] [padding:0.75rem_0.85rem] [transition:transform_0.18s,border-color_0.18s]\" data-tsd-source=\"/src/routes/index.tsx:58:19\"><div class=\"feature-icon-box teal-bg items-center flex justify-center [flex-shrink:0] [font-size:1.25rem]\" data-tsd-source=\"/src/routes/index.tsx:59:21\">\ud83c\udf0e</div><div class=\"feature-text flex-1 [min-width:0px]\" data-tsd-source=\"/src/routes/index.tsx:60:21\"><strong data-tsd-source=\"/src/routes/index.tsx:61:23\">Discover New Cultures</strong><p data-tsd-source=\"/src/routes/index.tsx:62:23\">Learn about traditions, lifestyles, food, languages and everyday life from people around the world.</p></div><span class=\"feature-rate-pill whitespace-nowrap [font-size:0.7rem] [font-weight:800]! [padding:0.2rem_0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:64:21\">Explore</span></div><div class=\"marketing-feature-card items-center flex [box-shadow:rgba(0,0,0,0.35)_0px_6px_18px]! [gap:0.75rem] [padding:0.75rem_0.85rem] [transition:transform_0.18s,border-color_0.18s]\" data-tsd-source=\"/src/routes/index.tsx:66:19\"><div class=\"feature-icon-box orange-bg items-center flex justify-center [flex-shrink:0] [font-size:1.25rem]\" data-tsd-source=\"/src/routes/index.tsx:67:21\">\ud83e\udd1d</div><div class=\"feature-text flex-1 [min-width:0px]\" data-tsd-source=\"/src/routes/index.tsx:68:21\"><strong data-tsd-source=\"/src/routes/index.tsx:69:23\">Meet International People</strong><p data-tsd-source=\"/src/routes/index.tsx:70:23\">Connect with members from different backgrounds who are interested in friendly cultural conversations.</p></div><span class=\"feature-rate-pill whitespace-nowrap [font-size:0.7rem] [font-weight:800]! [padding:0.2rem_0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:72:21\">Connect</span></div></div></div><div class=\"slide-bottom-content items-center flex flex-col text-center [gap:0.75rem] [padding-top:0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:76:15\"><h1 class=\"slide-main-heading [font-size:1.85rem] [letter-spacing:-0.02em] [line-height:1.25] [margin:0px]\" data-tsd-source=\"/src/routes/index.tsx:77:17\">Connect, Exchange &amp;<br data-tsd-source=\"/src/routes/index.tsx:77:152\">Discover New Cultures</h1><p class=\"slide-main-subtext max-w-[94%] [font-size:0.875rem] [line-height:1.45] [margin:0px]\" data-tsd-source=\"/src/routes/index.tsx:78:17\">Chat about languages, culture and everyday life with international members from around the world.</p><div class=\"slide-pagination-dots items-center flex gap-[0.45rem] justify-center [padding:0.35rem_0px]\" data-tsd-source=\"/src/routes/index.tsx:79:17\"><button class=\"pag-dot active [box-shadow:rgba(76,1,33,0.6)_0px_0px_12px]! [cursor:pointer] [padding:0px] [transition:0.25s]\" type=\"button\" aria-label=\"Slide 1\" data-tsd-source=\"/src/routes/index.tsx:80:19\"></button><button class=\"pag-dot [cursor:pointer] [padding:0px] [transition:0.25s]\" type=\"button\" aria-label=\"Slide 2\" data-tsd-source=\"/src/routes/index.tsx:81:19\"></button><button class=\"pag-dot [cursor:pointer] [padding:0px] [transition:0.25s]\" type=\"button\" aria-label=\"Slide 3\" data-tsd-source=\"/src/routes/index.tsx:82:19\"></button></div><button class=\"slide-cta-btn primary-teal-btn items-center flex justify-center no-underline [transition:transform_0.18s,background_0.18s,box-shadow_0.18s]\" type=\"button\" data-tsd-source=\"/src/routes/index.tsx:84:17\">Next \u2192</button></div></div>",
+  "media": [
+    {
+      "src": "http://localhost:8080/site-assets/20d745d21dcfa2ed.png",
+      "current": "http://localhost:8080/site-assets/20d745d21dcfa2ed.png",
+      "ok": 447
+    },
+    {
+      "src": "http://localhost:8080/site-assets/20d745d21dcfa2ed.png",
+      "current": "http://localhost:8080/site-assets/20d745d21dcfa2ed.png",
+      "ok": 447
+    }
+  ],
+  "controls": [
+    {
+      "text": "\ud83c\udf19 Dark",
+      "label": null,
+      "href": null
+    },
+    {
+      "text": "Skip",
+      "label": null,
+      "href": null
+    },
+    {
+      "text": "",
+      "label": "Slide 1",
+      "href": null
+    },
+    {
+      "text": "",
+      "label": "Slide 2",
+      "href": null
+    },
+    {
+      "text": "",
+      "label": "Slide 3",
+      "href": null
+    },
+    {
+      "text": "Next \u2192",
+      "label": null,
+      "href": null
+    }
+  ],
+  "header": "<header class=\"slide-top-header items-center flex justify-between [padding-bottom:0.75rem] [z-index:10]\" data-tsd-source=\"/src/routes/index.tsx:28:13\"><div role=\"button\" tabindex=\"0\" aria-label=\"Amoriva home\" class=\"slide-brand-logo items-center flex [cursor:pointer] [gap:0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:29:15\"><img class=\"Amoriva-app-icon block [max-width:100%]\" alt=\"Amoriva logo\" width=\"28\" height=\"28\" src=\"/site-assets/20d745d21dcfa2ed.png\" data-tsd-source=\"/src/routes/index.tsx:30:17\"><span class=\"slide-brand-title items-center flex gap-[0.35rem] [font-size:1.25rem] [font-weight:900]! [letter-spacing:-0.02em]\" data-tsd-source=\"/src/routes/index.tsx:31:17\">Amoriva<span class=\"slide-brand-pro [font-size:0.65rem] [font-weight:800]! [letter-spacing:0.05em] [padding:0.15rem_0.4rem]\" data-tsd-source=\"/src/routes/index.tsx:31:156\">PRO</span></span></div><div class=\"slide-top-controls items-center flex [gap:0.5rem]\" data-tsd-source=\"/src/routes/index.tsx:33:15\"><button class=\"theme-switch-btn [cursor:pointer] [transition:0.18s]\" type=\"button\" title=\"Toggle theme\" data-tsd-source=\"/src/routes/index.tsx:34:17\">\ud83c\udf19 Dark</button><button class=\"skip-slide-btn [cursor:pointer] [transition:0.18s]\" type=\"button\" data-tsd-source=\"/src/routes/index.tsx:35:33\">Skip</button></div></header>",
+  "wrapper": "landing-theme-wrapper flex justify-center [max-width:100vw] [overflow-x:hidden] [transition:background_0.3s] [@media(max-width:640px)]:[margin:0px]! ",
+  "scroll": 0
+}
