@@ -2,7 +2,7 @@ export type DemoProfile = { displayName: string; email: string };
 const key = "amoriva-demo-profile";
 
 export function createDemoProfile(displayName: string, email: string): DemoProfile {
-  return { displayName: displayName.trim() || email.split("@")[0], email: email.trim().toLowerCase() };
+  return { displayName: displayName.trim() || email.split("@")[0] || "Demo member", email: email.trim().toLowerCase() };
 }
 
 export function saveDemoProfile(profile: DemoProfile) {
