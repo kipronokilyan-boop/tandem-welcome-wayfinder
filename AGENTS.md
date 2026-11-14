@@ -31,3 +31,6 @@ use the editor.
 
 ## Imported website
 - Keep imported page markup and interaction state in its route file, retaining source styles separately to preserve captured layout and behavior.
+
+## Demo accounts
+- Demo profile state uses sessionStorage only and never collects passwords or guards private data; it is a tab-scoped simulation, not authentication.
