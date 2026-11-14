@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate, useHydrated } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { createDemoProfile, saveDemoProfile } from "@/lib/demo-account";
@@ -15,6 +15,7 @@ export const Route = createFileRoute("/signup")({
 });
 
 function Signup() {
+  const hydrated = useHydrated();
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -34,7 +35,7 @@ function Signup() {
       <label htmlFor="displayName">Display name</label><input id="displayName" name="displayName" autoComplete="nickname" required maxLength={80} />
       <label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required />
       {error && <p role="alert" className="demo-error">{error}</p>}
-      <Button variant="demo" type="submit" disabled={busy}>{busy ? "Opening…" : "Continue to demo"}</Button>
+      <Button variant="demo" type="submit" disabled={busy || !hydrated}>{busy ? "Opening…" : "Continue to demo"}</Button>
     </form>
     <p className="demo-note">Demo profile stays in this tab. No password or email confirmation.</p>
     <Button variant="demoLink" asChild><Link to="/login">Already tried it? Demo sign in</Link></Button>

@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate, useHydrated } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { createDemoProfile, readDemoProfile, saveDemoProfile } from "@/lib/demo-account";
@@ -15,6 +15,7 @@ export const Route = createFileRoute("/login")({
 });
 
 function Login() {
+  const hydrated = useHydrated();
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -35,7 +36,7 @@ function Login() {
     <form onSubmit={submit} className="demo-form">
       <label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required />
       {error && <p role="alert" className="demo-error">{error}</p>}
-      <Button variant="demo" type="submit" disabled={busy}>{busy ? "Opening…" : "Continue to demo"}</Button>
+      <Button variant="demo" type="submit" disabled={busy || !hydrated}>{busy ? "Opening…" : "Continue to demo"}</Button>
     </form>
     <p className="demo-note">Any valid email opens a demo profile. This is not secure sign-in.</p>
     <Button variant="demoLink" asChild><Link to="/signup">Create a demo profile</Link></Button>
