@@ -11,6 +11,35 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --demo-background: oklch(0.32 0.055 325);
+  --demo-foreground: oklch(0.98 0.012 320);
+  --demo-muted: oklch(0.82 0.024 320);
+  --demo-field: oklch(0.38 0.048 325);
+  --demo-border: oklch(0.62 0.04 325);
+  --demo-action: oklch(0.95 0.025 310);
+  --demo-action-text: oklch(0.3 0.055 325);
+  --demo-error: oklch(0.85 0.11 25);
+}
+.demo-page { min-height: 100svh; background: var(--demo-background); color: var(--demo-foreground); font-family: var(--font-sans); display: grid; align-items: center; padding: 40px 24px; }
+.demo-content { width: 100%; max-width: 400px; margin: auto; }
+.demo-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--demo-foreground); font-weight: 800; font-size: 26px; text-decoration: none; margin-bottom: 32px; }
+.demo-brand img { width: 40px; height: 40px; border-radius: 50%; }
+.demo-label { display: block; font-size: 12px; color: var(--demo-muted); margin-bottom: 12px; }
+.demo-content h1 { font-size: 28px; font-weight: 800; line-height: 1.25; margin: 0 0 28px; overflow-wrap: anywhere; }
+.demo-form { display: grid; gap: 12px; }
+.demo-form label { font-size: 14px; font-weight: 600; }
+.demo-form input { width: 100%; height: 48px; border: 1px solid var(--demo-border); border-radius: 8px; padding: 0 14px; background: var(--demo-field); color: var(--demo-foreground); font-size: 16px; margin-bottom: 8px; }
+.demo-form input:focus-visible { outline: 2px solid var(--demo-action); outline-offset: 2px; }
+.demo-button { width: 100%; min-height: 48px; background: var(--demo-action); color: var(--demo-action-text); font-weight: 700; white-space: normal; }
+.demo-button:hover { opacity: 0.92; }
+.demo-link-button { color: var(--demo-foreground); text-decoration: underline; padding: 0; white-space: normal; height: auto; }
+.demo-note { color: var(--demo-muted); font-size: 13px; line-height: 1.6; margin: 20px 0; }
+.demo-error { color: var(--demo-error); font-size: 14px; }
+.demo-profile { margin-bottom: 28px; }
+.demo-profile dt { font-size: 12px; color: var(--demo-muted); margin-top: 20px; }
+.demo-profile dd { margin: 6px 0; overflow-wrap: anywhere; }
+
 /*
  * Design system definition.
  *
