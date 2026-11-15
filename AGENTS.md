@@ -34,3 +34,4 @@ use the editor.
 
 ## Demo accounts
 - Demo profile state uses sessionStorage only and never collects passwords or guards private data; it is a tab-scoped simulation, not authentication.
+- Keep registered demo profiles separate from the active demo session so sign-out clears access state without losing names on returning login.
