@@ -35,3 +35,5 @@
 .review-row{flex-direction:column;align-items:stretch}
 .review-actions{display:flex;gap:8px;flex-wrap:wrap}.review-actions input{flex:1;min-width:140px}
 .chat-locked{text-align:center;padding:14px 0;font-size:14px}
+.chat-page .pay-network,.chat-page .pay-network:hover{background:var(--account-input);color:var(--account-text)}
+.chat-page .pay-network[aria-pressed="true"],.chat-page .pay-network[aria-pressed="true"]:hover{background:var(--account-action);color:var(--account-action-text)}
