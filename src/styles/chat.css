@@ -17,7 +17,7 @@
 .chat-bubble{max-width:80%;padding:9px 13px;border-radius:16px;font-size:14px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--account-message);align-self:flex-start}
 .chat-bubble.mine{align-self:flex-end;background:var(--account-action);color:var(--account-action-text)}
 .chat-bubble time{display:block;font-size:10px;opacity:.65;margin-top:3px}
-.chat-composer{position:sticky;bottom:0;display:flex;gap:8px;padding:12px 0;background:var(--account-background)}
+.chat-composer{position:sticky;bottom:0;display:flex;gap:8px;padding:12px 0;background:transparent}
 .chat-composer textarea{flex:1;min-height:44px;max-height:140px;resize:vertical;padding:10px 12px;border-radius:12px;border:1px solid var(--account-input-border);background:var(--account-input);color:var(--account-text);font:inherit;font-size:14px}
 .chat-composer textarea::placeholder{color:var(--account-placeholder)}
 .chat-send{min-height:44px;border-radius:12px;font-weight:800;background:var(--account-action-gradient);color:var(--account-action-text)}

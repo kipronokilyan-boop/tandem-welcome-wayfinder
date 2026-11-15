@@ -73,6 +73,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      is_chat_member: { Args: { _id: string }; Returns: boolean }
       list_chat_members: {
         Args: never
         Returns: {
