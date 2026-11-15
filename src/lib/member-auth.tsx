@@ -6,7 +6,6 @@ export const MemberContext = createContext<{ user: User | null; ready: boolean }
 export const useMember = () => useContext(MemberContext);
 
 export const countries = [
-  { name: 'Kenya', flag: '🇰🇪', code: '+254' },
   { name: 'Uganda', flag: '🇺🇬', code: '+256' },
   { name: 'Tanzania', flag: '🇹🇿', code: '+255' },
   { name: 'Ghana', flag: '🇬🇭', code: '+233' },
@@ -17,11 +16,13 @@ export const countries = [
   { name: 'Ethiopia', flag: '🇪🇹', code: '+251' },
 ];
 
+export const defaultCountry = countries[0];
+
 export function registrationFields(data: FormData) {
   const displayName = String(data.get('displayName') || '').trim();
   const email = String(data.get('email') || '').trim().toLowerCase();
   const password = String(data.get('password') || '');
-  const country = String(data.get('country') || '');
+  const country = String(data.get('country') || defaultCountry?.name || 'Uganda');
   const phone = String(data.get('phone') || '').trim();
   if (!displayName) throw new Error('Enter your full name.');
   if (!data.get('adult')) throw new Error('Confirm that you are 18 or older.');

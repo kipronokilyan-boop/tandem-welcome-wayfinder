@@ -1,7 +1,6 @@
 import { createFileRoute, Link, useNavigate, useHydrated } from '@tanstack/react-router';
 import { useEffect, useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
-import { SocialAccounts } from '@/components/account-controls';
 import { supabase } from '@/integrations/supabase/client';
 import { useMember } from '@/lib/member-auth';
 import accountCSS from '@/styles/accounts.css?raw';
@@ -38,5 +37,5 @@ function Login() {
     {!forgot && <div className="account-field"><div className="account-label-row"><label htmlFor="login-password">Password</label><Button variant="ghost" type="button" className="account-forgot" onClick={() => {setForgot(true); setError('');}}>Forgot Password?</Button></div><div className="account-input-wrap"><span className="account-input-icon">🔒</span><input id="login-password" name="password" type={showPassword ? 'text' : 'password'} placeholder="Enter your password" autoComplete="current-password" required/><Button variant="ghost" type="button" className="account-password-toggle" aria-label={showPassword ? 'Hide password' : 'Show password'} onClick={() => setShowPassword(value => !value)}>{showPassword ? '👁️' : '🙈'}</Button></div></div>}
     {error && <p role="alert" className="account-error">{error}</p>}{message && <p role="status" className="account-success">{message}</p>}
     <Button variant="ghost" className="account-submit" type="submit" disabled={busy || !hydrated}>{busy ? 'Please wait…' : forgot ? 'Send reset link' : 'Log In to Amoriva →'}</Button>
-  </form>{forgot ? <div className="account-footer"><Button variant="ghost" className="account-forgot" onClick={() => {setForgot(false);setError('');setMessage('');}}>← Back to login</Button></div> : <SocialAccounts/>}<div className="account-footer">Don't have an account? <Link to="/signup">Sign Up Free</Link></div></section></div></main></>;
+  </form>{forgot && <div className="account-footer"><Button variant="ghost" className="account-forgot" onClick={() => {setForgot(false);setError('');setMessage('');}}>← Back to login</Button></div>}<div className="account-footer">Don't have an account? <Link to="/signup">Sign Up Free</Link></div></section></div></main></>;
 }
