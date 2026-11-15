@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate, useHydrated } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
-import { createDemoProfile, saveDemoProfile } from "@/lib/demo-account";
+import { signUpDemo } from "@/lib/demo-account";
 
 export const Route = createFileRoute("/signup")({
   head: () => ({ meta: [
@@ -23,9 +23,11 @@ function Signup() {
     event.preventDefault(); setError(""); setBusy(true);
     const data = new FormData(event.currentTarget);
     try {
-      saveDemoProfile(createDemoProfile(String(data.get("displayName") || ""), String(data.get("email") || "")));
+      signUpDemo(String(data.get("displayName") || ""), String(data.get("email") || ""));
       await navigate({ to: "/account" });
-    } catch { setError("The demo could not save in this tab. Allow browser storage and try again."); setBusy(false); }
+    } catch (error) {
+      setError(error instanceof Error && error.name === "Error" ? error.message : "The demo could not save in this tab. Allow browser storage and try again.");
+    } finally { setBusy(false); }
   }
   return <main className="demo-page"><section className="demo-content">
     <Link to="/" className="demo-brand"><img src="/site-assets/20d745d21dcfa2ed.png" alt="" />Amoriva</Link>
@@ -35,7 +37,7 @@ function Signup() {
       <label htmlFor="displayName">Display name</label><input id="displayName" name="displayName" autoComplete="nickname" required maxLength={80} />
       <label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" required />
       {error && <p role="alert" className="demo-error">{error}</p>}
-      <Button variant="demo" type="submit" disabled={busy || !hydrated}>{busy ? "Opening…" : "Continue to demo"}</Button>
+      <Button variant="demo" type="submit" disabled={busy || !hydrated}>{busy ? "Opening…" : "Sign up"}</Button>
     </form>
     <p className="demo-note">Demo profile stays in this tab. No password or email confirmation.</p>
     <Button variant="demoLink" asChild><Link to="/login">Already tried it? Demo sign in</Link></Button>
