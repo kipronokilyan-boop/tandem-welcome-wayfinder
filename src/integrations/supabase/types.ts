@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      messages: {
+        Row: {
+          body: string
+          created_at: string
+          id: string
+          recipient_id: string
+          sender_id: string
+        }
+        Insert: {
+          body: string
+          created_at?: string
+          id?: string
+          recipient_id: string
+          sender_id: string
+        }
+        Update: {
+          body?: string
+          created_at?: string
+          id?: string
+          recipient_id?: string
+          sender_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           country: string
@@ -49,7 +73,15 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_chat_member: { Args: { _id: string }; Returns: boolean }
+      list_chat_members: {
+        Args: never
+        Returns: {
+          country: string
+          display_name: string
+          id: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

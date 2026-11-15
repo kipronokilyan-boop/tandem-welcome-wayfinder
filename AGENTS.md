@@ -41,4 +41,4 @@ use the editor.
 - Keep one root session subscriber and the client-only authenticated layout; private profile reads use the signed-in browser client with RLS so refreshes work without exposing other members.
 - Account pages retain their imported layout styles separately and omit payout promises or terms that are not implemented.
 - Signup opens the protected five-step assessment; onboarding answers and completion persist on the owner-scoped profile, and returning login chooses assessment or dashboard from that completion state.
-- Imported dashboard profiles are labeled examples and must not imply connected live chat, verified members, earned balances or working payments.
+- Imported dashboard profiles are labeled examples and must not imply verified members, earned balances or working payments; real member chat lives on the chat routes, using owner-scoped message rows and a members-list function that exposes only name and country.

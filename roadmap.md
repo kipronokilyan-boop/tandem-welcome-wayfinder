@@ -15,3 +15,7 @@
 # Activation notices
 - [x] Replace chat availability labels with Activation Required and show account approval details above the community.
 - [x] Verify activation prompts on phone and desktop without claiming payment submission or approval.
+# Member chat
+- [x] Real one-to-one chat between signed-up members (members list, conversations, live updates).
+- [x] Remove earnings and withdrawal wording from the dashboard.
+- [ ] Payment for activation — waiting on a registered merchant code/business account.

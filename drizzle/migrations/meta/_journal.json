@@ -15,6 +15,20 @@
       "when": 1794765218810,
       "tag": "0001_member_onboarding_preferences",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794767593138,
+      "tag": "0002_member_chat",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794767712075,
+      "tag": "0003_chat_recipient_check",
+      "breakpoints": true
     }
   ]
 }
