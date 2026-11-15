@@ -2,7 +2,8 @@ import { createFileRoute, Link, useNavigate, useHydrated } from '@tanstack/react
 import { useEffect, useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
-import { useMember } from '@/lib/member-auth';
+import { useMember, loadMemberProfile } from '@/lib/member-auth';
+import { memberDestination } from '@/lib/onboarding';
 import accountCSS from '@/styles/accounts.css?raw';
 
 export const Route = createFileRoute('/login')({
@@ -16,7 +17,11 @@ function Login() {
   const navigate = useNavigate(); const hydrated = useHydrated(); const { user, ready } = useMember();
   const [error, setError] = useState(''); const [message, setMessage] = useState(''); const [busy, setBusy] = useState(false);
   const [showPassword, setShowPassword] = useState(false); const [forgot, setForgot] = useState(false);
-  useEffect(() => { if (ready && user) void navigate({ to: '/account', replace: true }); }, [ready, user, navigate]);
+  useEffect(() => {
+    let active = true;
+    if (ready && user) void loadMemberProfile().then(profile => { if (active) void navigate({ to: memberDestination(profile.onboarding_completed), replace: true }); }).catch(() => { if (active) setError('Could not open your account. Please try again.'); });
+    return () => { active = false; };
+  }, [ready, user, navigate]);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setError(''); setMessage(''); setBusy(true);
     const form = new FormData(event.currentTarget); const email = String(form.get('email') || '').trim().toLowerCase();
@@ -27,7 +32,8 @@ function Login() {
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password: String(form.get('password') || '') });
         if (error) throw error;
-        await navigate({ to: '/account', replace: true });
+        const profile = await loadMemberProfile();
+        await navigate({ to: memberDestination(profile.onboarding_completed), replace: true });
       }
     } catch (error) { setError(error instanceof Error ? error.message : 'Unable to sign in. Try again.'); }
     finally { setBusy(false); }
