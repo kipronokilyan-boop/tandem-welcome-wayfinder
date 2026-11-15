@@ -32,7 +32,7 @@ export function registrationFields(data: FormData) {
 export async function loadMemberProfile() {
   const { data: { user }, error } = await supabase.auth.getUser();
   if (error || !user) throw new Error('Please sign in again.');
-  const { data: profile, error: profileError } = await supabase.from('profiles').select('display_name,country,phone').eq('id', user.id).single();
+  const { data: profile, error: profileError } = await supabase.from('profiles').select('display_name,country,phone,onboarding_answers,onboarding_completed').eq('id', user.id).single();
   if (profileError) throw profileError;
   return { ...profile, email: user.email };
 }

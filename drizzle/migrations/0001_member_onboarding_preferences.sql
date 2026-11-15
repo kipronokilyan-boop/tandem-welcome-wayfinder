@@ -1,0 +1,1 @@
+ALTER TABLE public.profiles ADD COLUMN onboarding_answers jsonb NOT NULL DEFAULT '{}'::jsonb, ADD COLUMN onboarding_completed boolean NOT NULL DEFAULT false;

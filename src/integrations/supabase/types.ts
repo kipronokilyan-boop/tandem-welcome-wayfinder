@@ -20,6 +20,8 @@ export type Database = {
           created_at: string
           display_name: string
           id: string
+          onboarding_answers: Json
+          onboarding_completed: boolean
           phone: string
         }
         Insert: {
@@ -27,6 +29,8 @@ export type Database = {
           created_at?: string
           display_name?: string
           id: string
+          onboarding_answers?: Json
+          onboarding_completed?: boolean
           phone?: string
         }
         Update: {
@@ -34,6 +38,8 @@ export type Database = {
           created_at?: string
           display_name?: string
           id?: string
+          onboarding_answers?: Json
+          onboarding_completed?: boolean
           phone?: string
         }
         Relationships: []

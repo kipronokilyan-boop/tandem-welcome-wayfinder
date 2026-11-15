@@ -1,0 +1,46 @@
+.member-onboarding .auth-header {width:100%;display:flex;justify-content:space-between;align-items:center;}
+.member-onboarding .auth-brand {display:flex;align-items:center;gap:8px;}
+.member-onboarding .auth-container {display:flex;justify-content:center;align-items:center;}
+.member-onboarding .assessment-card {width:100%;max-width:540px;}
+.member-question {border:0;margin:0;padding:0;min-width:0;}
+.member-question legend {font-size:14px;font-weight:700;margin-bottom:10px;}
+.member-question .option-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.member-question .option-chip,.member-question .response-card {height:auto;min-height:68px;width:100%;padding:12px;text-align:left;justify-content:flex-start;white-space:normal;word-break:normal;}
+.member-question .option-chip span {overflow-wrap:anywhere;}
+.member-onboarding .assessment-step-content {display:flex;flex-direction:column;gap:24px;}
+.member-onboarding .button-group-row {display:flex;gap:8px;margin-top:8px;}
+.member-onboarding .auth-submit-btn {height:auto;min-height:46px;white-space:normal;padding:12px;}
+.member-onboarding .secondary-btn {height:auto;min-width:72px;}
+.member-progress {width:100%;height:8px;margin:0 0 24px;accent-color:var(--account-action);}
+.member-flow-error {color:var(--account-error);font-size:13px;background:var(--account-message);padding:12px;border-radius:8px;margin-bottom:20px;}
+.response-options {display:grid;gap:12px;}
+.member-onboarding .scenario-box {padding:16px;background:var(--account-message);border-radius:8px;margin-bottom:24px;line-height:1.5;}
+.completion-trophy {font-size:48px;margin:12px 0;}
+.passed-state {text-align:center;}
+.passed-state .auth-submit-btn {margin-top:24px;}
+.member-dashboard .page-container {padding-bottom:110px;}
+.member-dashboard .dashboard-notice {padding:12px 20px;text-align:center;background:var(--account-action);color:var(--account-action-text);font-size:13px;font-weight:600;}
+.member-dashboard .dashboard-modal {position:fixed;inset:0;z-index:2000;background:var(--account-card);display:grid;place-items:center;padding:24px;}
+.member-dashboard .dashboard-modal section {max-width:400px;background:var(--account-action);color:var(--account-action-text);padding:24px;border-radius:8px;}
+.member-dashboard .dashboard-modal h2 {font-size:20px;margin-bottom:12px;}
+.member-dashboard .dashboard-modal p {line-height:1.5;}
+.member-dashboard .dashboard-modal button {margin-top:20px;}
+.member-dashboard .discover-search-input {min-width:0;}
+.member-dashboard .member-empty {padding:24px;text-align:center;}
+@media(max-width:640px){.member-onboarding .auth-container {padding:12px;align-items:flex-start;}.member-onboarding .auth-header {padding:12px;}.member-onboarding .assessment-card {padding:20px 16px!important;}.member-onboarding .auth-title {font-size:22px!important;}.member-onboarding .option-chip span {font-size:13px!important;}.member-onboarding .step-indicator-pill {max-width:170px;overflow:hidden;white-space:nowrap;font-size:11px;}.member-question legend{font-size:13px;}}
+@media(prefers-reduced-motion:reduce){.member-dashboard *,.member-onboarding * {animation:none!important;transition:none!important;}}
+
+.member-dashboard .dash-top-nav {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;width:100%;position:sticky;top:0;z-index:1000;background:var(--account-card);}
+.member-dashboard .dash-logo {display:flex;align-items:center;gap:8px;text-decoration:none;font-size:20px;font-weight:800;color:var(--account-text);}
+.member-dashboard .dash-header-actions {display:flex;align-items:center;gap:10px;}
+.member-dashboard .earnings-pill-header {white-space:nowrap;padding:6px 10px;}
+.member-dashboard .nav-user-initial {display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--account-action);color:var(--account-action-text);}
+.member-dashboard .user-quick-profile-btn {text-decoration:none;}
+.member-dashboard .desktop-tab-nav {display:flex;gap:12px;}
+.member-dashboard .tab-nav-btn {text-decoration:none;color:var(--account-text);}
+.member-dashboard .status-live-tag {display:block;margin-top:4px;}
+.member-dashboard .chatter-discover-card[hidden] {display:none!important;}
+.member-dashboard .mobile-tab-btn {display:flex;flex-direction:column;height:auto;min-height:54px;justify-content:center;gap:4px;text-decoration:none;}
+.member-dashboard .discover-cards-grid {align-items:stretch;}
+.member-onboarding .auth-brand {text-decoration:none;font-weight:800;}
+@media(max-width:767px){.member-dashboard .desktop-tab-nav {display:none;}.member-dashboard .dash-top-nav {padding:12px 14px;}.member-dashboard .dash-logo{font-size:18px;}.member-dashboard .mobile-bottom-tab-bar{display:flex;justify-content:space-around;}.member-dashboard .mobile-tab-label{font-size:10px;}}

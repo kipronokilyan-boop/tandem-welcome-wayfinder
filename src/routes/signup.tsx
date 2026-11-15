@@ -17,14 +17,14 @@ function Signup() {
   const [error, setError] = useState(''); const [message, setMessage] = useState(''); const [busy, setBusy] = useState(false);
   const [showPassword, setShowPassword] = useState(false); const [countryName, setCountryName] = useState(defaultCountry?.name || 'Uganda');
   const country = countries.find(item => item.name === countryName) || countries[0];
-  useEffect(() => { if (ready && user) void navigate({ to: '/account', replace: true }); }, [ready, user, navigate]);
+  useEffect(() => { if (ready && user) void navigate({ to: '/assessment', replace: true }); }, [ready, user, navigate]);
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setError(''); setBusy(true);
     try {
       const fields = registrationFields(new FormData(event.currentTarget));
       const { data, error } = await supabase.auth.signUp({ ...fields, options: { ...fields.options, emailRedirectTo: window.location.origin } });
       if (error) throw error;
-      if (data.session) await navigate({ to: '/account', replace: true });
+      if (data.session) await navigate({ to: '/assessment', replace: true });
       else setMessage('Check your email to confirm your account, then come back to log in.');
     } catch (error) { setError(error instanceof Error ? error.message : 'Unable to create your account. Try again.'); }
     finally { setBusy(false); }
