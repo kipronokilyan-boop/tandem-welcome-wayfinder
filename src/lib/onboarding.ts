@@ -23,7 +23,7 @@ export const onboardingSteps = [
 export type OnboardingAnswers = Record<string, string>;
 export function stepComplete(step: number, answers: OnboardingAnswers) {
  const current = onboardingSteps[step - 1];
- return Boolean(current && current.groups.every(group => group.options.includes(answers[group.key])));
+ return Boolean(current && current.groups.every(group => group.options.includes(answers[group.key] || '')));
 }
 export function allStepsComplete(answers: OnboardingAnswers) {
  return onboardingSteps.every((_, index) => stepComplete(index + 1, answers));

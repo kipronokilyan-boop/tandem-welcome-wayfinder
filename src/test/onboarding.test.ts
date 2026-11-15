@@ -9,8 +9,8 @@ describe('member onboarding flow', () => {
   expect(stepComplete(1, {language:'English',style:'Friendly & Empathetic'})).toBe(true);
  });
  it('requires all five stages before saving completion', () => {
-  const answers = Object.fromEntries(onboardingSteps.flatMap(step => step.groups.map(group => [group.key,group.options[0]])));
+  const answers = Object.fromEntries(onboardingSteps.flatMap(step => step.groups.map(group => [group.key,group.options[0] || ''])));
   expect(allStepsComplete(answers)).toBe(true);
-  delete answers.response; expect(allStepsComplete(answers)).toBe(false);
+  delete answers['response']; expect(allStepsComplete(answers)).toBe(false);
  });
 });
