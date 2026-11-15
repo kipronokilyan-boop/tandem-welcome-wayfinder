@@ -2,47 +2,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 export const ACTIVATION_FEE_UGX = 5576.92;
 export const ACTIVATION_FEE_USD = 1.35;
-export const PAYMENT_RECIPIENT = { Make sure the sender has an active Airtel Money account.
-
-
-
-Dial *185# on the Airtel Uganda SIM.
-
-
-
-Select Send Money.
-
-
-
-Select International Transfer.
-
-
-
-Choose Kenya.
-
-
-
-If a recipient network selection appears, choose Safaricom M-Pesa.
-
-
-
-Enter the recipient's Kenyan phone number with 254751725298.(WYCLIFFE LANG'AT KIPMUTAI)
-
-
-
-Enter the amount.
-
-
-
-Select the reason for the transfer.
-
-
-
-Review the transaction details and exchange rate.
-
-
-
-Enter your Airtel Money PIN to confirm.:, name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
+export const PAYMENT_RECIPIENT = { merchantCode: '129999', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
 export const NETWORKS = { mtn: 'MTN Mobile Money', airtel: 'Airtel Money' } as const;
 export type Network = keyof typeof NETWORKS;
 export type ActivationPayment = { id: string; user_id: string; network: string; transaction_id: string; payer_phone: string; amount_ugx: number; status: 'pending' | 'approved' | 'rejected'; review_note: string | null; created_at: string; reviewed_at: string | null };
