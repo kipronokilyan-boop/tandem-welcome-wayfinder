@@ -42,3 +42,4 @@ use the editor.
 - Account pages retain their imported layout styles separately and omit payout promises or terms that are not implemented.
 - Signup opens the protected five-step assessment; onboarding answers and completion persist on the owner-scoped profile, and returning login chooses assessment or dashboard from that completion state.
 - Imported dashboard profiles are labeled examples and must not imply verified members, earned balances or working payments; real member chat lives on the chat routes, using owner-scoped message rows and a members-list function that exposes only name and country.
+- Activation is manual: members submit mobile money transaction IDs, users with the verifier role approve them, and message sending is gated in RLS on an approved payment (verifiers and messages to verifiers are exempt).
