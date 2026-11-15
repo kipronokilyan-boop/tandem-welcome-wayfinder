@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      activation_payments: {
+        Row: {
+          amount_ugx: number
+          created_at: string
+          id: string
+          network: string
+          payer_phone: string
+          review_note: string | null
+          reviewed_at: string | null
+          reviewed_by: string | null
+          status: string
+          transaction_id: string
+          user_id: string
+        }
+        Insert: {
+          amount_ugx?: number
+          created_at?: string
+          id?: string
+          network: string
+          payer_phone: string
+          review_note?: string | null
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          transaction_id: string
+          user_id: string
+        }
+        Update: {
+          amount_ugx?: number
+          created_at?: string
+          id?: string
+          network?: string
+          payer_phone?: string
+          review_note?: string | null
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          transaction_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       messages: {
         Row: {
           body: string
@@ -68,11 +110,37 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_activated: { Args: { _user_id: string }; Returns: boolean }
       is_chat_member: { Args: { _id: string }; Returns: boolean }
       list_chat_members: {
         Args: never
@@ -82,9 +150,16 @@ export type Database = {
           id: string
         }[]
       }
+      list_payment_payers: {
+        Args: never
+        Returns: {
+          display_name: string
+          id: string
+        }[]
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "verifier"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -211,6 +286,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["verifier"],
+    },
   },
 } as const
