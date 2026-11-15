@@ -9,5 +9,5 @@
 - [x] Verify email sign-in and Uganda defaults on desktop and phone.
 
 # Post-signup experience
-- [ ] Replace the profile-only signup destination with the shared site's member onboarding and dashboard flow.
-- [ ] Preserve Uganda localization and real member accounts; distinguish simulated matches and earnings from real services.
+- [x] Replace the profile-only signup destination with five saved onboarding stages and dashboard; verify incomplete and completed member login paths.
+- [x] Preserve Uganda localization and real member accounts; label imported profiles as examples and report live chat and payments as unconnected.
