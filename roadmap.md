@@ -7,3 +7,7 @@
 - [x] Remove Google and Lovable account options.
 - [x] Default registration to Uganda and +256; no visible Kenyan locality references remain (Nairobi occurs only in unused imported style names).
 - [x] Verify email sign-in and Uganda defaults on desktop and phone.
+
+# Post-signup experience
+- [ ] Replace the profile-only signup destination with the shared site's member onboarding and dashboard flow.
+- [ ] Preserve Uganda localization and real member accounts; distinguish simulated matches and earnings from real services.
