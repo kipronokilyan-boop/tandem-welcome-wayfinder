@@ -7,7 +7,7 @@ describe("activation payment", () => {
     expect(ACTIVATION_FEE_UGX).toBe(5576.92);
   });
   it("pays merchant code 129999", () => {
-    expect(PAYMENT_RECIPIENT.merchantCode).toBe("254751725298");
+    expect(PAYMENT_RECIPIENT.merchantCode).toBe("129999");
   });
   it("accepts only MTN or Airtel", () => {
     expect(() => paymentFields("mpesa", "ABC123", "0771234567")).toThrow();
