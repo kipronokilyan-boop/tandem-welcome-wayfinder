@@ -13,5 +13,5 @@
 - [x] Preserve Uganda localization and real member accounts; label imported profiles as examples and report live chat and payments as unconnected.
 
 # Activation notices
-- [ ] Replace chat availability labels with Activation Required and show account approval details above the community.
-- [ ] Verify activation prompts on phone and desktop without claiming payment submission or approval.
+- [x] Replace chat availability labels with Activation Required and show account approval details above the community.
+- [x] Verify activation prompts on phone and desktop without claiming payment submission or approval.
