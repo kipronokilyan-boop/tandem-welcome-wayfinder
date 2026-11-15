@@ -4,6 +4,6 @@
 - [x] Verify real registration, email confirmation, returning login, profile access, password recovery and sign-out on desktop and phone.
 
 # Uganda account update
-- [ ] Remove Google and Lovable account options.
-- [ ] Default registration to Uganda and +256; replace visible Kenyan locality references.
-- [ ] Verify email sign-in and Uganda defaults.
+- [x] Remove Google and Lovable account options.
+- [x] Default registration to Uganda and +256; no visible Kenyan locality references remain (Nairobi occurs only in unused imported style names).
+- [x] Verify email sign-in and Uganda defaults on desktop and phone.
