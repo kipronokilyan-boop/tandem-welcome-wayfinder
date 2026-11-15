@@ -3,11 +3,12 @@ import { useSuspenseQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
+import { activationOptions } from '@/lib/activation';
 import { chatMembersOptions, sendMessage, threadOptions, MAX_MESSAGE_LENGTH } from '@/lib/chat';
 import chatCSS from '@/styles/chat.css?raw';
 
 export const Route = createFileRoute('/_authenticated/chat/$memberId')({
-  loader: ({ context, params }) => Promise.all([context.queryClient.ensureQueryData(chatMembersOptions), context.queryClient.ensureQueryData(threadOptions(params.memberId))]),
+  loader: ({ context, params }) => Promise.all([context.queryClient.ensureQueryData(chatMembersOptions), context.queryClient.ensureQueryData(activationOptions), context.queryClient.ensureQueryData(threadOptions(params.memberId))]),
   head: () => ({ meta: [
     { title: 'Conversation — Amoriva Uganda' }, { name: 'description', content: 'Private conversation with an Amoriva member.' },
     { property: 'og:title', content: 'Conversation — Amoriva Uganda' }, { property: 'og:description', content: 'Private conversation with an Amoriva member.' },
@@ -20,6 +21,7 @@ function Thread() {
   const { memberId } = Route.useParams();
   const { data: members } = useSuspenseQuery(chatMembersOptions);
   const { data } = useSuspenseQuery(threadOptions(memberId));
+  const { data: access } = useSuspenseQuery(activationOptions);
   const queryClient = useQueryClient();
   const [text, setText] = useState('');
   const [error, setError] = useState('');
@@ -51,10 +53,10 @@ function Thread() {
         <div ref={end} />
       </div>
       {error && <p className="chat-error" role="alert">{error}</p>}
-      <form className="chat-composer" onSubmit={submit}>
+      {!(access.activated || access.verifier) ? <p className="chat-locked">🔒 Activation required to send messages. <Link className="chat-real-link" to="/activate">{access.pending ? 'Payment under review' : 'Pay activation fee →'}</Link></p> : <form className="chat-composer" onSubmit={submit}>
         <textarea aria-label="Message" placeholder="Write a message…" maxLength={MAX_MESSAGE_LENGTH} value={text} onChange={e => setText(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); e.currentTarget.form?.requestSubmit(); } }} />
         <Button type="submit" className="chat-send" disabled={sending || !text.trim()}>{sending ? 'Sending…' : 'Send'}</Button>
-      </form>
+      </form>}
     </div>
   </main></>;
 }

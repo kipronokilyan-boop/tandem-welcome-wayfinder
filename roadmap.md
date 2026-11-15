@@ -18,4 +18,5 @@
 # Member chat
 - [x] Real one-to-one chat between signed-up members (members list, conversations, live updates).
 - [x] Remove earnings and withdrawal wording from the dashboard.
-- [ ] Payment for activation — waiting on a registered merchant code/business account.
+- [x] Payment for activation uses the provided merchant code.
+- [x] Manual MTN/Airtel activation: payment page, transaction ID submission, verifier review page; chat sending unlocks on approval.
