@@ -11,3 +11,7 @@
 # Post-signup experience
 - [x] Replace the profile-only signup destination with five saved onboarding stages and dashboard; verify incomplete and completed member login paths.
 - [x] Preserve Uganda localization and real member accounts; label imported profiles as examples and report live chat and payments as unconnected.
+
+# Activation notices
+- [x] Replace chat availability labels with Activation Required and show account approval details above the community.
+- [x] Verify activation prompts on phone and desktop without claiming payment submission or approval.
