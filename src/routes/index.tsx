@@ -1,5 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useMember } from '@/lib/member-auth';
+import { SignOutButton } from '@/components/account-controls';
 import welcomeCSS from "../styles/welcome.css?raw";
 import capturedCSS from "../styles/site.css?raw";
 
@@ -17,6 +19,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { user } = useMember();
   const [slide, setSlide] = useState(1);
   const [dark, setDark] = useState(false);
   return (
@@ -31,6 +34,7 @@ function Index() {
                 <span className="slide-brand-title items-center flex gap-[0.35rem] [font-size:1.25rem] [font-weight:900]! [letter-spacing:-0.02em]">Amoriva<span className="slide-brand-pro [font-size:0.65rem] [font-weight:800]! [letter-spacing:0.05em] [padding:0.15rem_0.4rem]">PRO</span></span>
               </div>
               <div className="slide-top-controls items-center flex [gap:0.5rem]">
+                {user && <><Link to="/account" className="theme-switch-btn">My account</Link><SignOutButton className="theme-switch-btn"/></>}
                 <button className="theme-switch-btn [cursor:pointer] [transition:0.18s]" type="button" title="Toggle theme" onClick={() => setDark(value => !value)}>{dark ? "☀️ Light" : "🌙 Dark"}</button>
                 {slide !== 3 && <button onClick={() => setSlide(3)} className="skip-slide-btn [cursor:pointer] [transition:0.18s]" type="button">Skip</button>}
               </div>

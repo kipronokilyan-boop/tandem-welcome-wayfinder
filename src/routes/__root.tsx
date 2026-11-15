@@ -9,7 +9,10 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import type { User } from '@supabase/supabase-js';
+import { supabase } from '@/integrations/supabase/client';
+import { MemberContext } from '@/lib/member-auth';
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -92,6 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap' },
       {
         rel: "stylesheet",
         href: appCss,
@@ -132,11 +136,38 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const [user, setUser] = useState<User | null>(null);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    let active = true;
+    let revision = 0;
+    async function validateUser() {
+      const current = ++revision;
+      const { data: { user } } = await supabase.auth.getUser();
+      if (active && current === revision) { setUser(user); setReady(true); }
+    }
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        window.sessionStorage.setItem('amoriva-password-recovery', 'true');
+        return;
+      }
+      if (event !== 'SIGNED_IN' && event !== 'SIGNED_OUT' && event !== 'USER_UPDATED') return;
+      if (event === 'SIGNED_OUT') { ++revision; setUser(null); setReady(true); }
+      else setTimeout(() => { if (active) void validateUser(); }, 0);
+      void router.invalidate();
+      if (event !== 'SIGNED_OUT') void queryClient.invalidateQueries();
+    });
+    void validateUser();
+    return () => { active = false; subscription.unsubscribe(); };
+  }, [router, queryClient]);
 
   return (
     <QueryClientProvider client={queryClient}>
+      <MemberContext.Provider value={{ user, ready }}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      </MemberContext.Provider>
     </QueryClientProvider>
   );
 }

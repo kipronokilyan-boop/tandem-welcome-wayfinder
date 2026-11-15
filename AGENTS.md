@@ -35,3 +35,8 @@ use the editor.
 ## Demo accounts
 - Demo profile state uses sessionStorage only and never collects passwords or guards private data; it is a tab-scoped simulation, not authentication.
 - Keep registered demo profiles separate from the active demo session so sign-out clears access state without losing names on returning login.
+
+## Member accounts
+- Live accounts use Lovable Cloud Auth and owner-scoped profiles; demo storage must never grant account access.
+- Keep one root session subscriber and the client-only authenticated layout; private profile reads use the signed-in browser client with RLS so refreshes work without exposing other members.
+- Account pages retain their imported layout styles separately and omit payout promises or terms that are not implemented.
