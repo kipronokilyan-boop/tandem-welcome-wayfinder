@@ -25,6 +25,12 @@
 .member-dashboard .dashboard-modal h2 {font-size:20px;margin-bottom:12px;}
 .member-dashboard .dashboard-modal p {line-height:1.5;}
 .member-dashboard .dashboard-modal button {margin-top:20px;}
+.member-dashboard .activation-banner {display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;}
+.member-dashboard .activation-banner strong {display:block;font-size:16px;margin-bottom:4px;}
+.member-dashboard .activation-banner button {height:auto;min-height:44px;white-space:normal;flex-shrink:0;}
+.member-dashboard .dashboard-modal p + p {margin-top:14px;}
+.member-dashboard .start-chat-btn {flex-wrap:wrap;white-space:normal;height:auto;min-height:48px;}
+@media(max-width:640px){.member-dashboard .activation-banner {align-items:stretch;flex-direction:column;}.member-dashboard .activation-banner button {width:100%;}.member-dashboard .dashboard-modal {padding:16px;}.member-dashboard .dashboard-modal section {width:100%;max-height:90dvh;overflow:auto;}}
 .member-dashboard .discover-search-input {min-width:0;}
 .member-dashboard .member-empty {padding:24px;text-align:center;}
 @media(max-width:640px){.member-onboarding .auth-container {padding:12px;align-items:flex-start;}.member-onboarding .auth-header {padding:12px;}.member-onboarding .assessment-card {padding:20px 16px!important;}.member-onboarding .auth-title {font-size:22px!important;}.member-onboarding .option-chip span {font-size:13px!important;}.member-onboarding .step-indicator-pill {max-width:170px;overflow:hidden;white-space:nowrap;font-size:11px;}.member-question legend{font-size:13px;}}
