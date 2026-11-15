@@ -12,6 +12,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --account-background: linear-gradient(180deg, #583759, #4c2c4d 40%, #422443);
+  --account-text: #f1f5f9;
+  --account-card: #301a31cc;
+  --account-border: #ffffff14;
+  --account-shadow: 0 24px 60px #0009, inset 0 1px #ffffff0d;
+  --account-muted: #ffffff8c;
+  --account-label: #ffffffbf;
+  --account-input: #ffffff1f;
+  --account-input-border: #b5a9b9;
+  --account-placeholder: #c3b8c2;
+  --account-action: #f5f1ff;
+  --account-action-text: #381f39;
+  --account-action-gradient: linear-gradient(135deg, #fff, #f5f1ff);
+  --account-action-shadow: 0 8px 24px #4c012159;
+  --account-message: #ffffff12;
+  --account-error: #ffc4c4;
+  --google-background: #fff;
+  --google-border: #747775;
+  --google-text: #1f1f1f;
   --demo-background: oklch(0.32 0.055 325);
   --demo-foreground: oklch(0.98 0.012 320);
   --demo-muted: oklch(0.82 0.024 320);
