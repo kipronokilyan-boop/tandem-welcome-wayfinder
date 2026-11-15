@@ -53,11 +53,11 @@ function Index() {
               <div className="banner-left-content flex-1">
                 <div className="banner-badge-row items-center flex flex-wrap [gap:0.75rem] [margin-bottom:0.75rem]">
                   <span className="flags-duo-badge [font-size:0.9rem] [font-weight:700] [letter-spacing:0.5px] [padding:0.25rem_0.75rem]">🇺🇬 + 🇺🇸 🇨🇦 🇬🇧 🇦🇺</span>
-                  <span className="banner-pulse-live uppercase! [font-size:0.75rem]! [font-weight:800]! [letter-spacing:0.5px]! [padding:0.25rem_0.65rem]!">🟢 Active Expat Chats Live</span>
+                  <span className="banner-pulse-live uppercase! [font-size:0.75rem]! [font-weight:800]! [letter-spacing:0.5px]! [padding:0.25rem_0.65rem]!">🌍 Example Expat Profiles</span>
                   <span className="location-pill [font-size:0.75rem] [font-weight:700] [padding:0.25rem_0.65rem]">📍 Kampala, Uganda</span>
                 </div>
-                <h2 className="banner-heading [font-size:1.35rem]! [font-weight:900]! [line-height:1.3]! [margin:0px_0px_0.5rem]!">USA, Canada, UK &amp; Australia Foreigners — Working &amp; Based in Uganda</h2>
-                <p className="banner-subtext max-w-[720px] [font-size:0.9rem]! [line-height:1.55]! [margin:0px]!">Connect with international professionals from USA, Canada, UK, and Australia who live and work across Kampala — Kololo, Ntinda, Nakasero, Muyenga and Bugolobi. Each profile shows dual flags (Uganda 🇺🇬 + origin) and their Kampala base.</p>
+                <h2 className="banner-heading [font-size:1.35rem]! [font-weight:900]! [line-height:1.3]! [margin:0px_0px_0.5rem]!">International Conversation · Kampala, Uganda</h2>
+                <p className="banner-subtext max-w-[720px] [font-size:0.9rem]! [line-height:1.55]! [margin:0px]!">Explore example profiles and conversation topics inspired by Uganda, international culture and daily life.</p>
               </div>
             </div>
             <div className="discover-cards-grid grid [gap:1.5rem]">
