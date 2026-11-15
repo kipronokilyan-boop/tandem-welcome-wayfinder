@@ -51,7 +51,7 @@ function Activate() {
         </form>}
       </section></>}
       {data.payments.length > 0 && <section className="chat-section"><h2>Your submissions</h2><ul className="chat-list">{data.payments.map(p => <li key={p.id} className="chat-row"><span className="chat-row-text"><strong>{label[p.status]}</strong><span>{p.network.toUpperCase()} · {p.transaction_id} · {new Date(p.created_at).toLocaleDateString()}</span>{p.review_note && <span>Note: {p.review_note}</span>}</span></li>)}</ul></section>}
-      <p className="chat-empty">Questions or refund requests: message the Verification Officer from your chats.</p>
+      <p className="chat-empty">Questions or refund requests: call or WhatsApp <strong>{PAYMENT_RECIPIENT.contact}</strong> ({PAYMENT_RECIPIENT.name}, {PAYMENT_RECIPIENT.role}), or message him from your chats.</p>
     </div>
   </main></>;
 }

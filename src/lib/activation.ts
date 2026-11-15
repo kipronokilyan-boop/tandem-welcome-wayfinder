@@ -2,7 +2,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 export const ACTIVATION_FEE_UGX = 5576.92;
 export const ACTIVATION_FEE_USD = 1.35;
-export const PAYMENT_RECIPIENT = { merchantCode: '129999', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer' };
+export const PAYMENT_RECIPIENT = { merchantCode: '129999', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
 export const NETWORKS = { mtn: 'MTN Mobile Money', airtel: 'Airtel Money' } as const;
 export type Network = keyof typeof NETWORKS;
 export type ActivationPayment = { id: string; user_id: string; network: string; transaction_id: string; payer_phone: string; amount_ugx: number; status: 'pending' | 'approved' | 'rejected'; review_note: string | null; created_at: string; reviewed_at: string | null };
