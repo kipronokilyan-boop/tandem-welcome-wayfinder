@@ -92,7 +92,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Laura</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -127,7 +127,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Mikael</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -162,7 +162,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Christian</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -197,7 +197,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Fiona</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -232,7 +232,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Natalie</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -267,7 +267,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Margaret</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -302,7 +302,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with James</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -337,7 +337,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Sofia</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -372,7 +372,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with William</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -407,7 +407,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Chloe</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -442,7 +442,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Sarah</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -477,7 +477,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Diane</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -512,7 +512,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Lucas</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -547,7 +547,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Kenji</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -582,7 +582,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Fatima</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -617,7 +617,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Helga</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -652,7 +652,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Ingrid</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -687,7 +687,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Hans</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -722,7 +722,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Astrid</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -757,7 +757,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Min-Jun</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -792,7 +792,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Victoria</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -827,7 +827,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Willem</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -862,7 +862,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Sophie</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -897,7 +897,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Robert</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -932,7 +932,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Anouk</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -967,7 +967,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Oliver</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1002,7 +1002,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Thomas</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1037,7 +1037,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Elena</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1072,7 +1072,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Henrik</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1107,7 +1107,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Sebastian</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1142,7 +1142,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Clara</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1177,7 +1177,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Grace</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1212,7 +1212,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Pierre</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1247,7 +1247,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Maria</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1282,7 +1282,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Arthur</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1317,7 +1317,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Isabelle</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1352,7 +1352,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Patrick</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1387,7 +1387,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Beatrix</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1422,7 +1422,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Alexander</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1457,7 +1457,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Charlotte</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1492,7 +1492,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Evelyn</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1527,7 +1527,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Freja</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1562,7 +1562,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Hannah</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1597,7 +1597,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Christopher</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1632,7 +1632,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Liam</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1667,7 +1667,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Karen</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1702,7 +1702,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Emily</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1737,7 +1737,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with George</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1772,7 +1772,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Jonathan</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1807,7 +1807,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Benjamin</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1842,7 +1842,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Richard</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1877,7 +1877,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Charles</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1912,7 +1912,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Lars</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1947,7 +1947,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with David</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -1982,7 +1982,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Matteo</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
@@ -2017,7 +2017,7 @@ function Index() {
                 <div className="card-action-footer">
                   <Button variant="ghost" className={"\x73tart-chat-btn items-center flex justify-center [cursor:pointer]! [gap:0.5rem] [transition:0.2s_cubic-bezier(0.4,0,0.2,1)]!"} type="button">
                     <span>💬 Chat with Daniel</span>
-                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Coming soon) →</span>
+                    <span className="btn-rate-sub [font-size:0.75rem] [font-weight:600]">(Activation Required) →</span>
                   </Button>
                 </div>
               </div>
