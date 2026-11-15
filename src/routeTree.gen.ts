@@ -16,8 +16,10 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
+import { Route as AuthenticatedActivateRouteImport } from './routes/_authenticated/activate'
 import { Route as AuthenticatedAssessmentRouteImport } from './routes/_authenticated/assessment'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedVerifyRouteImport } from './routes/_authenticated/verify'
 import { Route as AuthenticatedChatIndexRouteImport } from './routes/_authenticated/chat.index'
 import { Route as AuthenticatedChatMemberIdRouteImport } from './routes/_authenticated/chat.$memberId'
 
@@ -55,6 +57,11 @@ const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
   path: '/account',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedActivateRoute = AuthenticatedActivateRouteImport.update({
+  id: '/activate',
+  path: '/activate',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedAssessmentRoute = AuthenticatedAssessmentRouteImport.update({
   id: '/assessment',
   path: '/assessment',
@@ -63,6 +70,11 @@ const AuthenticatedAssessmentRoute = AuthenticatedAssessmentRouteImport.update({
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedVerifyRoute = AuthenticatedVerifyRouteImport.update({
+  id: '/verify',
+  path: '/verify',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedChatIndexRoute = AuthenticatedChatIndexRouteImport.update({
@@ -84,8 +96,10 @@ export interface FileRoutesByFullPath {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/activate': typeof AuthenticatedActivateRoute
   '/assessment': typeof AuthenticatedAssessmentRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/verify': typeof AuthenticatedVerifyRoute
   '/chat/$memberId': typeof AuthenticatedChatMemberIdRoute
   '/chat/': typeof AuthenticatedChatIndexRoute
 }
@@ -96,8 +110,10 @@ export interface FileRoutesByTo {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/account': typeof AuthenticatedAccountRoute
+  '/activate': typeof AuthenticatedActivateRoute
   '/assessment': typeof AuthenticatedAssessmentRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/verify': typeof AuthenticatedVerifyRoute
   '/chat/$memberId': typeof AuthenticatedChatMemberIdRoute
   '/chat': typeof AuthenticatedChatIndexRoute
 }
@@ -110,8 +126,10 @@ export interface FileRoutesById {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
+  '/_authenticated/activate': typeof AuthenticatedActivateRoute
   '/_authenticated/assessment': typeof AuthenticatedAssessmentRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/verify': typeof AuthenticatedVerifyRoute
   '/_authenticated/chat/$memberId': typeof AuthenticatedChatMemberIdRoute
   '/_authenticated/chat/': typeof AuthenticatedChatIndexRoute
 }
@@ -124,8 +142,10 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/account'
+    | '/activate'
     | '/assessment'
     | '/dashboard'
+    | '/verify'
     | '/chat/$memberId'
     | '/chat/'
   fileRoutesByTo: FileRoutesByTo
@@ -136,8 +156,10 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/account'
+    | '/activate'
     | '/assessment'
     | '/dashboard'
+    | '/verify'
     | '/chat/$memberId'
     | '/chat'
   id:
@@ -149,8 +171,10 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/_authenticated/account'
+    | '/_authenticated/activate'
     | '/_authenticated/assessment'
     | '/_authenticated/dashboard'
+    | '/_authenticated/verify'
     | '/_authenticated/chat/$memberId'
     | '/_authenticated/chat/'
   fileRoutesById: FileRoutesById
@@ -215,6 +239,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAccountRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/activate': {
+      id: '/_authenticated/activate'
+      path: '/activate'
+      fullPath: '/activate'
+      preLoaderRoute: typeof AuthenticatedActivateRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/assessment': {
       id: '/_authenticated/assessment'
       path: '/assessment'
@@ -227,6 +258,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/verify': {
+      id: '/_authenticated/verify'
+      path: '/verify'
+      fullPath: '/verify'
+      preLoaderRoute: typeof AuthenticatedVerifyRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/chat/': {
@@ -248,16 +286,20 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
+  AuthenticatedActivateRoute: typeof AuthenticatedActivateRoute
   AuthenticatedAssessmentRoute: typeof AuthenticatedAssessmentRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedVerifyRoute: typeof AuthenticatedVerifyRoute
   AuthenticatedChatMemberIdRoute: typeof AuthenticatedChatMemberIdRoute
   AuthenticatedChatIndexRoute: typeof AuthenticatedChatIndexRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAccountRoute: AuthenticatedAccountRoute,
+  AuthenticatedActivateRoute: AuthenticatedActivateRoute,
   AuthenticatedAssessmentRoute: AuthenticatedAssessmentRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedVerifyRoute: AuthenticatedVerifyRoute,
   AuthenticatedChatMemberIdRoute: AuthenticatedChatMemberIdRoute,
   AuthenticatedChatIndexRoute: AuthenticatedChatIndexRoute,
 }
