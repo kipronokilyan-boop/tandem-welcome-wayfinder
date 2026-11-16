@@ -28,7 +28,13 @@
 .pay-network.active{background:var(--account-action);color:var(--account-action-text)}
 .pay-details{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0 0 12px;font-size:14px}
 .pay-details dt{color:var(--account-muted)}.pay-details dd{margin:0;font-weight:800;overflow-wrap:anywhere}
-.pay-steps{margin:0;padding-left:20px;font-size:13px;line-height:1.6;color:var(--account-label)}
+.pay-steps{list-style:decimal;margin:0;padding-left:24px;font-size:13px;line-height:1.6;color:var(--account-label)}
+.pay-steps li{padding-left:4px;margin:0 0 8px}
+.transfer-heading{font-size:14px;font-weight:800;margin:0 0 8px}
+.pay-copy-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}
+.pay-copy-number{font-variant-numeric:tabular-nums;letter-spacing:0.03em}
+.pay-copy-button{min-height:36px;border:1px solid var(--account-input-border);border-radius:8px;background:var(--account-card);color:var(--account-text);font-size:12px;font-weight:800}
+.pay-copy-status{display:block;margin-top:4px;font-size:12px;font-weight:700}
 .pay-form{display:flex;flex-direction:column;gap:12px}
 .pay-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--account-label)}
 .pay-form input,.review-actions input{min-height:44px;padding:10px 12px;border-radius:12px;border:1px solid var(--account-input-border);background:var(--account-input);color:var(--account-text);font:inherit;font-size:14px}

@@ -21,8 +21,17 @@
 .member-dashboard .page-container {padding-bottom:110px;}
 .member-dashboard .dashboard-notice {padding:12px 20px;text-align:center;background:var(--account-action);color:var(--account-action-text);font-size:13px;font-weight:600;}
 .member-dashboard .dashboard-modal {position:fixed;inset:0;z-index:2000;background:var(--account-card);display:grid;place-items:center;padding:24px;}
-.member-dashboard .dashboard-modal section {max-width:400px;background:var(--account-action);color:var(--account-action-text);padding:24px;border-radius:8px;}
+.member-dashboard .dashboard-modal section {max-width:520px;background:var(--account-action);color:var(--account-action-text);padding:24px;border-radius:8px;}
 .member-dashboard .dashboard-modal h2 {font-size:20px;margin-bottom:12px;}
+.member-dashboard .dashboard-modal .transfer-heading {font-size:15px;font-weight:800;margin:16px 0 8px;}
+.member-dashboard .dashboard-modal .pay-details {font-size:13px;}
+.member-dashboard .dashboard-modal .pay-steps {list-style:decimal;font-size:13px;line-height:1.55;padding-left:28px;}
+.member-dashboard .dashboard-modal .pay-steps li {padding-left:4px;margin:0 0 8px;}
+.member-dashboard .dashboard-modal .pay-copy-row {display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px;}
+.member-dashboard .dashboard-modal .pay-copy-number {font-variant-numeric:tabular-nums;letter-spacing:0.03em;}
+.member-dashboard .dashboard-modal .pay-copy-button {min-height:36px;white-space:normal;border:1px solid var(--account-input-border);border-radius:8px;background:var(--account-card);color:var(--account-text);font-size:12px;font-weight:800;}
+.member-dashboard .dashboard-modal .pay-networks {margin:12px 0;}
+.member-dashboard .dashboard-modal .pay-network {min-width:0;white-space:normal;}
 .member-dashboard .dashboard-modal p {line-height:1.5;}
 .member-dashboard .dashboard-modal button {margin-top:20px;}
 .member-dashboard .activation-banner {display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;}

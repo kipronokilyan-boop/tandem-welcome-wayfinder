@@ -2,9 +2,26 @@ import { supabase } from '@/integrations/supabase/client';
 
 export const ACTIVATION_FEE_UGX = 5576.92;
 export const ACTIVATION_FEE_USD = 1.35;
-export const PAYMENT_RECIPIENT = { merchantCode: '129999', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
+export const ACTIVATION_TRANSFER_AMOUNT_UGX = 5600;
+export const PAYMENT_RECIPIENT = { phone: '+254 751 725298', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
 export const NETWORKS = { mtn: 'MTN Mobile Money', airtel: 'Airtel Money' } as const;
 export type Network = keyof typeof NETWORKS;
+export const INTERNATIONAL_TRANSFER_STEPS: Record<Network, string[]> = {
+  mtn: [
+    'Dial *165*1# on your registered MTN Uganda line.',
+    'Choose Africa, then East Africa, then Kenya. Choose the mobile-money recipient option if prompted.',
+    'Enter the Kenyan recipient number with country code 254.',
+    `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (rounded from the UGX ${ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 })} activation fee). Review the recipient, KES amount and fees shown before confirming with your MTN MoMo PIN.`,
+    'Save the confirmation SMS and transaction ID for the activation form.',
+  ],
+  airtel: [
+    'Dial *185# on your registered Airtel Uganda line.',
+    'Choose Send Money, then the international or send-abroad option, and select Kenya.',
+    'Choose the mobile-money recipient option if prompted.',
+    `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (rounded from the UGX ${ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 })} activation fee). Review the recipient, KES amount and fees shown before confirming with your Airtel Money PIN.`,
+    'Save the confirmation SMS and transaction ID for the activation form.',
+  ],
+};
 export type ActivationPayment = { id: string; user_id: string; network: string; transaction_id: string; payer_phone: string; amount_ugx: number; status: 'pending' | 'approved' | 'rejected'; review_note: string | null; created_at: string; reviewed_at: string | null };
 
 export function paymentFields(network: string, transactionId: string, phone: string) {

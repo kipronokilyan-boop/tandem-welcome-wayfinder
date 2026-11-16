@@ -1,13 +1,14 @@
 import { describe, expect, it, vi } from "vitest";
 vi.mock("@/integrations/supabase/client", () => ({ supabase: {} }));
-import { paymentFields, ACTIVATION_FEE_UGX, PAYMENT_RECIPIENT } from "@/lib/activation";
+import { paymentFields, ACTIVATION_FEE_UGX, ACTIVATION_TRANSFER_AMOUNT_UGX, PAYMENT_RECIPIENT } from "@/lib/activation";
 
 describe("activation payment", () => {
-  it("fee is UGX 5,600", () => {
+  it("keeps the configured fee and rounded transfer amount", () => {
     expect(ACTIVATION_FEE_UGX).toBe(5576.92);
+    expect(ACTIVATION_TRANSFER_AMOUNT_UGX).toBe(5600);
   });
-  it("pays merchant code 129999", () => {
-    expect(PAYMENT_RECIPIENT.merchantCode).toBe("129999");
+  it("sends the activation payment to the configured Kenyan mobile number", () => {
+    expect(PAYMENT_RECIPIENT.phone).toBe("+254 751 725298");
   });
   it("accepts only MTN or Airtel", () => {
     expect(() => paymentFields("mpesa", "ABC123", "0771234567")).toThrow();

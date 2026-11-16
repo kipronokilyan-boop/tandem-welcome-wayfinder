@@ -2,7 +2,8 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { useSuspenseQuery, useQueryClient } from '@tanstack/react-query';
 import { useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
-import { activationOptions, submitPayment, ACTIVATION_FEE_UGX, ACTIVATION_FEE_USD, NETWORKS, PAYMENT_RECIPIENT, type Network } from '@/lib/activation';
+import { ActivationTransferSteps } from '@/components/activation-transfer-steps';
+import { activationOptions, submitPayment, ACTIVATION_FEE_UGX, ACTIVATION_FEE_USD, ACTIVATION_TRANSFER_AMOUNT_UGX, NETWORKS, PAYMENT_RECIPIENT, type Network } from '@/lib/activation';
 import chatCSS from '@/styles/chat.css?raw';
 
 export const Route = createFileRoute('/_authenticated/activate')({
@@ -16,6 +17,7 @@ export const Route = createFileRoute('/_authenticated/activate')({
 });
 
 const fee = ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 });
+const transferAmount = ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG');
 const label = { pending: '⏳ Waiting for review', approved: '✅ Approved', rejected: '❌ Not approved' };
 
 function Activate() {
@@ -37,9 +39,10 @@ function Activate() {
       <section className="chat-section"><h2>1. Choose your network</h2>
         <div className="pay-networks">{(Object.keys(NETWORKS) as Network[]).map(n => <Button key={n} type="button" variant="ghost" className={`pay-network ${network === n ? 'active' : ''}`} aria-pressed={network === n} onClick={() => setNetwork(n)}>{NETWORKS[n]}</Button>)}</div>
       </section>
-      <section className="chat-section"><h2>2. Pay with {NETWORKS[network]}</h2>
-        <dl className="pay-details"><dt>Merchant code</dt><dd>{PAYMENT_RECIPIENT.merchantCode}</dd><dt>Name</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Amount</dt><dd>UGX {fee}</dd></dl>
-        <ol className="pay-steps"><li>Open your {NETWORKS[network]} menu and choose to pay a merchant.</li><li>Enter merchant code <strong>{PAYMENT_RECIPIENT.merchantCode}</strong>.</li><li>Confirm the name shows <strong>{PAYMENT_RECIPIENT.name}</strong> before entering your PIN.</li><li>Keep the confirmation SMS — you'll need its transaction ID.</li></ol>
+      <section className="chat-section"><h2>2. Send to Kenya with {NETWORKS[network]}</h2>
+        <dl className="pay-details"><dt>Kenyan number</dt><dd>{PAYMENT_RECIPIENT.phone}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Activation fee</dt><dd>UGX {fee}</dd><dt>Send</dt><dd>UGX {transferAmount} (rounded)</dd></dl>
+        <h3 className="transfer-heading">Steps to follow</h3>
+        <ActivationTransferSteps network={network} />
       </section>
       <section className="chat-section"><h2>3. Submit your payment details</h2>
         {data.pending ? <p className="chat-empty">Your payment is waiting for review. You'll be able to chat once it's approved.</p> :

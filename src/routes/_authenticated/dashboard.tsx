@@ -1,7 +1,9 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
+import { ActivationTransferSteps } from "@/components/activation-transfer-steps";
 import { memberProfileOptions } from "@/lib/member-auth";
+import { ACTIVATION_FEE_UGX, ACTIVATION_TRANSFER_AMOUNT_UGX, NETWORKS, PAYMENT_RECIPIENT, type Network } from "@/lib/activation";
 import flowCSS from "@/styles/member-flow.css?raw";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import capturedCSS from "@/styles/pages/dashboard.css?raw";
@@ -21,6 +23,7 @@ function Index() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
   const [notice, setNotice] = useState('');
+  const [paymentNetwork, setPaymentNetwork] = useState<Network>('mtn');
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('.chatter-discover-card').forEach(card => {
       const text = (card.textContent || '').toLowerCase();
@@ -35,7 +38,7 @@ function Index() {
         <div className="member-dashboard dashboard-layout app-3page-layout flex flex-col [min-height:100vh]" onClick={(event) => { const target = event.target; if (!(target instanceof Element)) return; const control = target.closest("button,a"); if (!control || control.closest('.dashboard-modal')) return; const text = control.textContent || ""; if (control.closest('a[href^="/chat"],a[href="/activate"]')) return; if (text.includes("Chat") || control.hasAttribute('data-activation') || control.getAttribute("aria-label") === "View notifications") { event.preventDefault(); setNotice(control.getAttribute("aria-label") === "View notifications" ? "No new notifications." : "activation"); } }}>
           <ImportedHeader />
           <div className="dashboard-notice activation-banner"><div><strong>🔒 Activation Required</strong><span>Account approval is required before introductions to real chat partners.</span></div><Link className="chat-real-link" to="/activate">Pay activation fee →</Link><Link className="chat-real-link" to="/chat">💬 Chat with real members →</Link></div>
-          {notice && <div className="dashboard-modal" role="dialog" aria-modal="true" aria-label={notice === 'activation' ? 'Activation Required' : 'Account notice'}><section><h2>{notice === 'activation' ? '🔒 Activation Required' : 'Amoriva community'}</h2>{notice === 'activation' ? <><p>Activation requires manual payment review. Once payment is verified, the team will arrange introductions to real users.</p><p>These displayed profiles are examples, not currently available chat partners. Activation does not guarantee a particular partner.</p><p><Link className="chat-real-link" to="/activate" onClick={() => setNotice('')}>Pay activation fee (MTN / Airtel) →</Link></p></> : <p>{notice}</p>}<Button variant="demo" onClick={(event) => {event.stopPropagation();setNotice('');}}>Close</Button></section></div>}
+          {notice && <div className="dashboard-modal" role="dialog" aria-modal="true" aria-label={notice === 'activation' ? 'Activation Required' : 'Account notice'}><section><h2>{notice === 'activation' ? '🔒 Activation Required' : 'Amoriva community'}</h2>{notice === 'activation' ? <><p>The activation fee is UGX {ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 })}. Send UGX {ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (rounded) from your Ugandan wallet to this Kenyan number:</p><dl className="pay-details"><dt>Number</dt><dd>{PAYMENT_RECIPIENT.phone}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Fee</dt><dd>UGX {ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 })}</dd><dt>Send</dt><dd>UGX {ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')}</dd></dl><div className="pay-networks" role="group" aria-label="Choose your Ugandan mobile money network">{(Object.keys(NETWORKS) as Network[]).map(network => <Button key={network} type="button" variant="ghost" className={`pay-network ${paymentNetwork === network ? 'active' : ''}`} aria-pressed={paymentNetwork === network} onClick={() => setPaymentNetwork(network)}>{NETWORKS[network]}</Button>)}</div><h3 className="transfer-heading">Steps to follow</h3><ActivationTransferSteps network={paymentNetwork} /><p>Your payment is reviewed manually. Save the transaction ID, then enter it on the activation page. Displayed profiles are examples; activation does not guarantee a particular chat partner.</p><p><Link className="chat-real-link" to="/activate" onClick={() => setNotice('')}>Continue to activation →</Link></p></> : <p>{notice}</p>}<Button variant="demo" onClick={(event) => {event.stopPropagation();setNotice('');}}>Close</Button></section></div>}
           <main className="page-container online-page flex-1 [margin:0px_auto]">
             <div className="discover-hero-banner">
               <div className="hero-text-wrap">
