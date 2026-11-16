@@ -1515,6 +1515,7 @@ ul, ol { margin: 0px; padding: 0px; list-style: none; }
 
 .status-live-tag.online { background: rgb(230, 245, 246); color: rgb(35, 122, 130); border: 1px solid rgb(158, 227, 231); }
 .status-live-tag.typing { background: rgb(230, 245, 246); color: rgb(35, 122, 130); border: 1px solid rgb(191, 219, 254); }
+.status-live-tag.looking { background: rgb(239, 246, 255); color: rgb(29, 78, 216); border: 1px solid rgb(191, 219, 254); }
 .status-live-tag.away { background: rgb(254, 252, 232); color: rgb(202, 138, 4); border: 1px solid rgb(254, 240, 138); }
 .activation-warning-topbar {
   background: rgb(254,242,242);

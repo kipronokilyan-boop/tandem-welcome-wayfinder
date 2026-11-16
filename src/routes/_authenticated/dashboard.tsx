@@ -2,6 +2,7 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { ActivationTransferSteps } from "@/components/activation-transfer-steps";
+import { ExampleProfileActivityStatus } from "@/components/example-profile-activity-status";
 import { memberProfileOptions } from "@/lib/member-auth";
 import { ACTIVATION_FEE_KES, ACTIVATION_FEE_UGX, ACTIVATION_TRANSFER_AMOUNT_UGX, NETWORKS, PAYMENT_RECIPIENT, type Network } from "@/lib/activation";
 import flowCSS from "@/styles/member-flow.css?raw";
@@ -87,7 +88,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Switzerland · <strong className="card-job [font-weight:600]">Botanist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={0} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -122,7 +123,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Sweden · <strong className="card-job [font-weight:600]">Park Ranger</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={1} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -157,7 +158,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Denmark · <strong className="card-job [font-weight:600]">Marine Biologist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={2} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -192,7 +193,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Textile Artisan</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={3} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -227,7 +228,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>France · <strong className="card-job [font-weight:600]">Perfumer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={4} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -262,7 +263,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired High School Teacher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={5} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -297,7 +298,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Canada · <strong className="card-job [font-weight:600]">Wildlife Biologist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={6} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -332,7 +333,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Italy · <strong className="card-job [font-weight:600]">Textile Stylist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={7} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -367,7 +368,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired Pilot</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={8} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -402,7 +403,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Canada · <strong className="card-job [font-weight:600]">Volunteer Coordinator</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={9} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -437,7 +438,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Charity Volunteer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={10} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -472,7 +473,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Botanical Researcher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={11} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -507,7 +508,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Switzerland · <strong className="card-job [font-weight:600]">Alps Mountain Guide</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={12} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -542,7 +543,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Japan · <strong className="card-job [font-weight:600]">Green Tea Specialist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={13} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -577,7 +578,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UAE · <strong className="card-job [font-weight:600]">Hospitality Director</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={14} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -612,7 +613,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Germany · <strong className="card-job [font-weight:600]">Baker &amp; Cooking Enthusiast</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={15} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -647,7 +648,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Norway · <strong className="card-job [font-weight:600]">Landscape Painter</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={16} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -682,7 +683,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Germany · <strong className="card-job [font-weight:600]">Renewable Energy Specialist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={17} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -717,7 +718,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Sweden · <strong className="card-job [font-weight:600]">Documentary Writer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={18} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -752,7 +753,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>South Korea · <strong className="card-job [font-weight:600]">Tech Consultant</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={19} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -787,7 +788,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Music Enthusiast</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={20} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -822,7 +823,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Netherlands · <strong className="card-job [font-weight:600]">Horticulturist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={21} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -857,7 +858,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Netherlands · <strong className="card-job [font-weight:600]">Museum Guide</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={22} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -892,7 +893,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Former Book Publisher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={23} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -927,7 +928,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Netherlands · <strong className="card-job [font-weight:600]">Social Anthropologist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={24} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -962,7 +963,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Maritime Historian</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={25} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -997,7 +998,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>France · <strong className="card-job [font-weight:600]">Agricultural Advisor</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={26} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1032,7 +1033,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Austria · <strong className="card-job [font-weight:600]">Culture Curator</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={27} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1067,7 +1068,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Norway · <strong className="card-job [font-weight:600]">Fjord Guide</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={28} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1102,7 +1103,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Germany · <strong className="card-job [font-weight:600]">Watchmaker</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={29} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1137,7 +1138,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Austria · <strong className="card-job [font-weight:600]">Baker</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={30} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1172,7 +1173,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Gardener</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={31} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1207,7 +1208,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>France · <strong className="card-job [font-weight:600]">Retired Wine &amp; Coffee Merchant</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={32} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1242,7 +1243,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Italy · <strong className="card-job [font-weight:600]">Music Teacher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={33} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1277,7 +1278,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Australia · <strong className="card-job [font-weight:600]">Rancher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={34} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1312,7 +1313,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Belgium · <strong className="card-job [font-weight:600]">Pastry Chef</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={35} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1347,7 +1348,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Ireland · <strong className="card-job [font-weight:600]">Folklorist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={36} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1382,7 +1383,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Germany · <strong className="card-job [font-weight:600]">Librarian</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={37} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1417,7 +1418,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">University Historian</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={38} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1452,7 +1453,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>France · <strong className="card-job [font-weight:600]">Historian</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={39} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1487,7 +1488,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired Pharmacist</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={40} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1522,7 +1523,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Denmark · <strong className="card-job [font-weight:600]">Teacher</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={41} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1557,7 +1558,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Quiltmaker</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={42} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1592,7 +1593,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Canada · <strong className="card-job [font-weight:600]">Timber Framer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={43} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1627,7 +1628,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Ireland · <strong className="card-job [font-weight:600]">Harbor Worker</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={44} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1662,7 +1663,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Australia · <strong className="card-job [font-weight:600]">Community Nurse</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={45} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1697,7 +1698,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">School Librarian</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={46} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1732,7 +1733,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Canada · <strong className="card-job [font-weight:600]">Forester</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={47} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1767,7 +1768,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Australia · <strong className="card-job [font-weight:600]">Geographer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={48} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1802,7 +1803,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Canal Traveler</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={49} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1837,7 +1838,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired Farmer</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={50} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1872,7 +1873,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>UK · <strong className="card-job [font-weight:600]">Retired Barrister</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={51} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1907,7 +1908,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Sweden · <strong className="card-job [font-weight:600]">Wood Craftsman</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={52} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1942,7 +1943,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired Coach</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={53} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -1977,7 +1978,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>Italy · <strong className="card-job [font-weight:600]">Coffee Roaster</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={54} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">
@@ -2012,7 +2013,7 @@ function Index() {
                     </div>
                     <div className="card-sub-info [font-size:0.825rem] [margin:0.25rem_0px_0px]">
                       <span>USA · <strong className="card-job [font-weight:600]">Retired Coach</strong></span>
-                      <span className="status-live-tag">Example profile</span></div>
+                      <ExampleProfileActivityStatus index={55} /></div>
                   </div>
                 </div>
                 <div className="what-he-wants-box">

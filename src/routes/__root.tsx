@@ -8,6 +8,7 @@ import {
   HeadContent,
   Scripts,
   type ErrorComponentProps,
+  useRouterState,
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import type { User } from '@supabase/supabase-js';
@@ -138,6 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
+  const pathname = useRouterState({ select: state => state.location.pathname });
   const [user, setUser] = useState<User | null>(null);
   const [ready, setReady] = useState(false);
   useEffect(() => {
@@ -168,7 +170,7 @@ function RootComponent() {
       <MemberContext.Provider value={{ user, ready }}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      <TemporaryActivityToast />
+      {pathname !== '/signup' && <TemporaryActivityToast />}
       </MemberContext.Provider>
     </QueryClientProvider>
   );
