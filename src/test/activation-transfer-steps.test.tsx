@@ -22,19 +22,20 @@ describe('activation transfer steps', () => {
 
     const steps = Array.from(screen.getByRole('list').querySelectorAll('li'))
       .map(step => step.textContent?.replace(/\s+/g, ' ').trim() ?? '');
-    expect(steps.slice(0, 4)).toEqual([
-      'Dial *165# on your registered MTN Uganda line.',
+    expect(steps).toHaveLength(9);
+    expect(steps.slice(0, 5)).toEqual([
+      'Dial *165# on your MTN Uganda line.',
       'Select 1 – Send Money.',
-      'Select 2 – East Africa (displayed).',
-      'Select 1 – Safaricom M-Pesa (displayed).',
+      'Select 2 – East Africa.',
+      'Select Kenya from the list of countries displayed.',
+      'Select 1 – Safaricom M-Pesa.',
     ]);
-    expect(steps[4]).toContain('Enter the Kenyan recipient number with country code 254:');
-    expect(steps[4]).toContain('254711289718');
-    expect(steps.slice(5)).toEqual([
-      'Enter UGX 9,517 (300 KES).',
-      "Confirm the recipient's details.",
-      'Enter your MTN MoMo PIN.',
-      'You will receive a transaction confirmation SMS.',
+    expect(steps[5]).toContain("Enter the recipient's Kenyan M-Pesa number:");
+    expect(steps[5]).toContain('254711289718');
+    expect(steps.slice(6)).toEqual([
+      'Enter the amount in Ugandan Shillings (UGX): UGX 9,517 (approximately KES 300).',
+      "Confirm the recipient's details, including the phone number and amount.",
+      'Enter your MTN Mobile Money (MoMo) PIN to authorize the transaction.',
     ]);
     fireEvent.click(screen.getByRole('button', { name: 'Copy number' }));
 

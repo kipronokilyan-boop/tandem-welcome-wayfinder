@@ -28,7 +28,7 @@ export function ActivationTransferSteps({ network }: Props) {
     <ol className="pay-steps">
       {beforeRecipient.map(step => <li key={step}>{step}</li>)}
       <li>
-        Enter the Kenyan recipient number with country code 254:
+        {network === 'mtn' ? "Enter the recipient's Kenyan M-Pesa number:" : 'Enter the Kenyan recipient number with country code 254:'}
         <div className="pay-copy-row">
           <strong className="pay-copy-number">{recipientNumber}</strong>
           <Button type="button" variant="outline" className="pay-copy-button" onClick={copyNumber}>

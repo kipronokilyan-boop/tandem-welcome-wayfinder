@@ -6,14 +6,15 @@ export const MemberContext = createContext<{ user: User | null; ready: boolean }
 export const useMember = () => useContext(MemberContext);
 
 export const countries = [
-  { name: 'Uganda', flag: '🇺🇬', code: '+256' },
-  { name: 'Tanzania', flag: '🇹🇿', code: '+255' },
-  { name: 'Ghana', flag: '🇬🇭', code: '+233' },
-  { name: 'Nigeria', flag: '🇳🇬', code: '+234' },
-  { name: 'Zambia', flag: '🇿🇲', code: '+260' },
-  { name: 'South Africa', flag: '🇿🇦', code: '+27' },
-  { name: 'Botswana', flag: '🇧🇼', code: '+267' },
-  { name: 'Ethiopia', flag: '🇪🇹', code: '+251' },
+  { name: 'Uganda', flag: '🇺🇬', flagCode: 'ug', code: '+256' },
+  { name: 'Kenya', flag: '🇰🇪', flagCode: 'ke', code: '+254' },
+  { name: 'Tanzania', flag: '🇹🇿', flagCode: 'tz', code: '+255' },
+  { name: 'Ghana', flag: '🇬🇭', flagCode: 'gh', code: '+233' },
+  { name: 'Nigeria', flag: '🇳🇬', flagCode: 'ng', code: '+234' },
+  { name: 'Zambia', flag: '🇿🇲', flagCode: 'zm', code: '+260' },
+  { name: 'South Africa', flag: '🇿🇦', flagCode: 'za', code: '+27' },
+  { name: 'Botswana', flag: '🇧🇼', flagCode: 'bw', code: '+267' },
+  { name: 'Ethiopia', flag: '🇪🇹', flagCode: 'et', code: '+251' },
 ];
 
 export const defaultCountry = countries[0];

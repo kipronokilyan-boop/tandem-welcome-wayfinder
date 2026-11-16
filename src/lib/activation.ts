@@ -14,16 +14,16 @@ export const PAYMENT_RECIPIENT = {
 export const INTERNATIONAL_TRANSFER_STEPS: Record<Network, { beforeRecipient: string[]; afterRecipient: string[] }> = {
   mtn: {
     beforeRecipient: [
-      'Dial *165# on your registered MTN Uganda line.',
+      'Dial *165# on your MTN Uganda line.',
       'Select 1 – Send Money.',
-      'Select 2 – East Africa (displayed).',
-      'Select 1 – Safaricom M-Pesa (displayed).',
+      'Select 2 – East Africa.',
+      'Select Kenya from the list of countries displayed.',
+      'Select 1 – Safaricom M-Pesa.',
     ],
     afterRecipient: [
-      `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (${ACTIVATION_FEE_KES} KES).`,
-      "Confirm the recipient's details.",
-      'Enter your MTN MoMo PIN.',
-      'You will receive a transaction confirmation SMS.',
+      `Enter the amount in Ugandan Shillings (UGX): UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (approximately KES ${ACTIVATION_FEE_KES}).`,
+      "Confirm the recipient's details, including the phone number and amount.",
+      'Enter your MTN Mobile Money (MoMo) PIN to authorize the transaction.',
     ],
   },
   airtel: {

@@ -1,9 +1,11 @@
 import { createFileRoute, Link, useNavigate, useHydrated } from '@tanstack/react-router';
 import { useEffect, useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { countries, defaultCountry, registrationFields, useMember } from '@/lib/member-auth';
 import { supabase } from '@/integrations/supabase/client';
 import accountCSS from '@/styles/accounts.css?raw';
+import 'flag-icons/css/flag-icons.min.css';
 
 export const Route = createFileRoute('/signup')({
   head: () => ({ meta: [
@@ -31,10 +33,10 @@ function Signup() {
   }
   return <><style>{accountCSS}</style><main className="account-page"><header className="account-header"><Link to="/" className="account-brand"><img src="/site-assets/20d745d21dcfa2ed.png" alt=""/>Amoriva</Link><Link to="/" className="account-back">← Back to Home</Link></header><div className="account-container"><section className="account-card account-signup"><div className="account-card-header"><div className="account-badge">🔥 Free Registration</div><h1 className="account-title">Create Your Free Chatting Account</h1><p className="account-subtitle">Connect with international members and share your culture</p></div>
     {message ? <p className="account-success" role="status">{message}</p> : <form onSubmit={submit} className="account-form">
-      <div className="account-field"><label htmlFor="signup-country">Country / Location</label><div className="account-input-wrap"><span className="account-input-icon">🌍</span><select id="signup-country" name="country" value={countryName} onChange={event => setCountryName(event.target.value)}>{countries.map(item => <option key={item.name} value={item.name}>{item.flag} {item.name}</option>)}</select></div><small className="account-hint">📍 Registration location: <strong>{country?.name} {country?.flag}</strong></small></div>
+      <div className="account-field"><label htmlFor="signup-country">Country / Location</label><Select name="country" value={countryName} onValueChange={setCountryName}><SelectTrigger id="signup-country" className="account-country-trigger"><SelectValue /></SelectTrigger><SelectContent className="account-country-content">{countries.map(item => <SelectItem key={item.name} value={item.name} className="account-country-option"><span className={`fi fi-${item.flagCode} account-country-flag`} aria-hidden="true" />{item.name}</SelectItem>)}</SelectContent></Select><small className="account-hint">📍 Registration location: <strong><span className={`fi fi-${country?.flagCode} account-country-flag`} aria-hidden="true" /> {country?.name}</strong></small></div>
       <div className="account-field"><label htmlFor="fullName">Full Name</label><div className="account-input-wrap"><span className="account-input-icon">👤</span><input id="fullName" name="displayName" placeholder="John Doe" autoComplete="name" maxLength={80} required/></div></div>
       <div className="account-field"><label htmlFor="signup-email">Email Address</label><div className="account-input-wrap"><span className="account-input-icon">✉️</span><input id="signup-email" name="email" type="email" placeholder="johndoe@gmail.com" autoComplete="email" required/></div></div>
-      <div className="account-field"><label htmlFor="signup-phone">Phone Number</label><div className="account-phone"><div className="account-phone-prefix">{country?.flag} {country?.code}</div><div className="account-input-wrap"><input id="signup-phone" name="phone" type="tel" placeholder="0771234567" autoComplete="tel-national" required/></div></div></div>
+      <div className="account-field"><label htmlFor="signup-phone">Phone Number</label><div className="account-phone"><div className="account-phone-prefix"><span className={`fi fi-${country?.flagCode} account-country-flag`} aria-hidden="true" /> {country?.code}</div><div className="account-input-wrap"><input id="signup-phone" name="phone" type="tel" placeholder="0771234567" autoComplete="tel-national" required/></div></div></div>
       <div className="account-field"><label htmlFor="signup-password">Create Password</label><div className="account-input-wrap"><span className="account-input-icon">🔒</span><input id="signup-password" name="password" type={showPassword ? 'text' : 'password'} placeholder="Minimum 6 characters" autoComplete="new-password" minLength={6} required/><Button variant="ghost" className="account-password-toggle" type="button" aria-label={showPassword ? 'Hide password' : 'Show password'} onClick={() => setShowPassword(value => !value)}>{showPassword ? '👁️' : '🙈'}</Button></div></div>
       <label className="account-check"><input type="checkbox" name="adult" required/><span>I confirm I am 18 or older</span></label>
       {error && <p className="account-error" role="alert">{error}</p>}
