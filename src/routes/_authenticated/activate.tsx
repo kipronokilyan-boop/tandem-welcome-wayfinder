@@ -3,7 +3,7 @@ import { useSuspenseQuery, useQueryClient } from '@tanstack/react-query';
 import { useState, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { ActivationTransferSteps } from '@/components/activation-transfer-steps';
-import { activationOptions, submitPayment, ACTIVATION_FEE_UGX, ACTIVATION_FEE_USD, ACTIVATION_TRANSFER_AMOUNT_UGX, NETWORKS, PAYMENT_RECIPIENT, type Network } from '@/lib/activation';
+import { activationOptions, submitPayment, ACTIVATION_FEE_KES, ACTIVATION_FEE_UGX, ACTIVATION_TRANSFER_AMOUNT_UGX, NETWORKS, PAYMENT_RECIPIENT, type Network } from '@/lib/activation';
 import chatCSS from '@/styles/chat.css?raw';
 
 export const Route = createFileRoute('/_authenticated/activate')({
@@ -16,7 +16,7 @@ export const Route = createFileRoute('/_authenticated/activate')({
   component: Activate,
 });
 
-const fee = ACTIVATION_FEE_UGX.toLocaleString('en-UG', { minimumFractionDigits: 2 });
+const fee = ACTIVATION_FEE_UGX.toLocaleString('en-UG');
 const transferAmount = ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG');
 const label = { pending: '⏳ Waiting for review', approved: '✅ Approved', rejected: '❌ Not approved' };
 
@@ -35,12 +35,12 @@ function Activate() {
     <header className="chat-header"><Link to="/dashboard">← Community</Link><h1>🔒 Activation</h1>{data.verifier ? <Link to="/verify">Review</Link> : <span />}</header>
     <div className="chat-body">
       {data.activated ? <section className="chat-section"><h2>✅ Your account is active</h2><p className="chat-empty">You can now chat with members.</p><p><Link className="chat-real-link" to="/chat">Go to chats →</Link></p></section> : <>
-      <section className="chat-section"><h2>What you get</h2><p className="chat-empty">A one-time fee of <strong>UGX {fee}</strong> (about ${ACTIVATION_FEE_USD}) unlocks sending messages to real Amoriva members. It does not include earnings or any guaranteed partner.</p></section>
+      <section className="chat-section"><h2>What you get</h2><p className="chat-empty">A one-time fee of <strong>KES {ACTIVATION_FEE_KES} (about UGX {fee})</strong> unlocks sending messages to real Amoriva members. It does not include earnings or any guaranteed partner.</p></section>
       <section className="chat-section"><h2>1. Choose your network</h2>
         <div className="pay-networks">{(Object.keys(NETWORKS) as Network[]).map(n => <Button key={n} type="button" variant="ghost" className={`pay-network ${network === n ? 'active' : ''}`} aria-pressed={network === n} onClick={() => setNetwork(n)}>{NETWORKS[n]}</Button>)}</div>
       </section>
       <section className="chat-section"><h2>2. Send to Kenya with {NETWORKS[network]}</h2>
-        <dl className="pay-details"><dt>Kenyan number</dt><dd>{PAYMENT_RECIPIENT.phone}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Activation fee</dt><dd>UGX {fee}</dd><dt>Send</dt><dd>UGX {transferAmount} (rounded)</dd></dl>
+        <dl className="pay-details"><dt>Kenyan number</dt><dd>{PAYMENT_RECIPIENT.phone}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Activation fee</dt><dd>KES {ACTIVATION_FEE_KES} (about UGX {fee})</dd><dt>Send</dt><dd>UGX {transferAmount}</dd></dl>
         <h3 className="transfer-heading">Steps to follow</h3>
         <ActivationTransferSteps network={network} />
       </section>
