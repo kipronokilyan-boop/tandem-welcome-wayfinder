@@ -47,7 +47,17 @@ function Index() {
                 <p className="discover-subtitle max-w-[700px]">Explore example conversation profiles, languages and cultural interests from around the world.</p>
               </div>
               <div className="discover-search-bar items-center flex gap-[0.6rem] [margin-bottom:1.25rem] [padding:0.6rem_1rem] [transition:0.2s]">
-                <span className="search-icon [font-size:1.1rem]">🔍</span>
+                <svg className="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <defs>
+                    <linearGradient id="amoriva-search-gradient" x1="4" y1="4" x2="20" y2="20">
+                      <stop offset="0%" stopColor="#0ea5e9" />
+                      <stop offset="100%" stopColor="#ec4899" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="url(#amoriva-search-gradient)" strokeWidth="2" />
+                  <path d="m15.3 15.3 5.2 5.2" fill="none" stroke="url(#amoriva-search-gradient)" strokeWidth="2.2" strokeLinecap="round" />
+                  <path d="M7.5 9.2c0-.5.4-.9.9-.9h4.2c.5 0 .9.4.9.9v2.2c0 .5-.4.9-.9.9h-2.7l-1.5 1.1v-1.1h0c-.5 0-.9-.4-.9-.9z" fill="#f6a5c5" />
+                </svg>
                 <input className="discover-search-input flex-1 [font-size:0.95rem] [outline:none]" placeholder="Search online members by name, country, Swahili, safari, culture..." type="text" aria-label="Search members" value={search} onChange={event => setSearch(event.target.value)} />
               </div>
               <div className="category-filter-row">{['All', 'Culture', 'Friendship', 'Food'].map(item => <Button key={item} variant="ghost" className={`filter-pill ${category === item ? 'active' : ''}`} aria-pressed={category === item} onClick={() => setCategory(item)}>{item === 'All' ? '🌍 All Profiles' : item}</Button>)}</div>

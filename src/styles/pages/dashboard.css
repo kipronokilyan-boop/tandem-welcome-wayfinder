@@ -969,6 +969,9 @@ ul, ol { margin: 0px; padding: 0px; list-style: none; }
 .discover-search-bar:focus-within { border-color: rgb(76, 1, 33); background: rgba(255, 255, 255, 0.08); box-shadow: rgba(76, 1, 33, 0.18) 0px 0px 0px 3px; }
 .search-icon {
   color: rgb(246,165,197);
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
 }
 
 .discover-search-input {
