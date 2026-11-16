@@ -170,7 +170,7 @@ function RootComponent() {
       <MemberContext.Provider value={{ user, ready }}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      {pathname !== '/signup' && <TemporaryActivityToast />}
+      {pathname === '/dashboard' && <TemporaryActivityToast />}
       </MemberContext.Provider>
     </QueryClientProvider>
   );
