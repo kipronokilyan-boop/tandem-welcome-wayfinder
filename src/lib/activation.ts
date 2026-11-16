@@ -3,9 +3,14 @@ import { supabase } from '@/integrations/supabase/client';
 export const ACTIVATION_FEE_KES = 300;
 export const ACTIVATION_FEE_UGX = 9517;
 export const ACTIVATION_TRANSFER_AMOUNT_UGX = 9517;
-export const PAYMENT_RECIPIENT = { phone: '254 751 725298', name: "WYCLIFFE LANG'AT KIPMUTAI", role: 'Verification Officer', contact: '+256 751 725298' };
 export const NETWORKS = { mtn: 'MTN Mobile Money', airtel: 'Airtel Money' } as const;
 export type Network = keyof typeof NETWORKS;
+export const PAYMENT_RECIPIENT = {
+  phoneByNetwork: { mtn: '254711289718', airtel: '254 751 725298' },
+  name: "WYCLIFFE LANG'AT KIPMUTAI",
+  role: 'Verification Officer',
+  contact: '254751725298',
+};
 export const INTERNATIONAL_TRANSFER_STEPS: Record<Network, string[]> = {
   mtn: [
     'Dial *165*1# on your registered MTN Uganda line.',

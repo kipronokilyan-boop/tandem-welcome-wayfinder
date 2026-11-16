@@ -6,7 +6,7 @@ type Props = { network: Network };
 
 export function ActivationTransferSteps({ network }: Props) {
   const [copyStatus, setCopyStatus] = useState('');
-  const recipientNumber = PAYMENT_RECIPIENT.phone.replace(/\D/g, '');
+  const recipientNumber = PAYMENT_RECIPIENT.phoneByNetwork[network].replace(/\D/g, '');
   const [firstStep, secondStep, , ...remainingSteps] = INTERNATIONAL_TRANSFER_STEPS[network];
 
   async function copyNumber() {

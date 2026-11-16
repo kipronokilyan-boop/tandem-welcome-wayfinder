@@ -11,6 +11,21 @@ afterEach(() => {
 });
 
 describe('activation transfer steps', () => {
+  it('shows and copies the MTN-specific Kenyan recipient number', async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText },
+    });
+
+    render(<ActivationTransferSteps network="mtn" />);
+
+    expect(screen.getByText('254711289718')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Copy number' }));
+
+    await waitFor(() => expect(writeText).toHaveBeenCalledWith('254711289718'));
+  });
+
   it('shows numbered Airtel instructions and copies the Kenyan recipient number', async () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.defineProperty(navigator, 'clipboard', {

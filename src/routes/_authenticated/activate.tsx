@@ -40,7 +40,7 @@ function Activate() {
         <div className="pay-networks">{(Object.keys(NETWORKS) as Network[]).map(n => <Button key={n} type="button" variant="ghost" className={`pay-network ${network === n ? 'active' : ''}`} aria-pressed={network === n} onClick={() => setNetwork(n)}>{NETWORKS[n]}</Button>)}</div>
       </section>
       <section className="chat-section"><h2>2. Send to Kenya with {NETWORKS[network]}</h2>
-        <dl className="pay-details"><dt>Kenyan number</dt><dd>{PAYMENT_RECIPIENT.phone}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Activation fee</dt><dd>KES {ACTIVATION_FEE_KES} (about UGX {fee})</dd><dt>Send</dt><dd>UGX {transferAmount}</dd></dl>
+        <dl className="pay-details"><dt>Kenyan number</dt><dd>{PAYMENT_RECIPIENT.phoneByNetwork[network]}</dd><dt>Recipient</dt><dd>{PAYMENT_RECIPIENT.name} ({PAYMENT_RECIPIENT.role})</dd><dt>Activation fee</dt><dd>KES {ACTIVATION_FEE_KES} (about UGX {fee})</dd><dt>Send</dt><dd>UGX {transferAmount}</dd></dl>
         <h3 className="transfer-heading">Steps to follow</h3>
         <ActivationTransferSteps network={network} />
       </section>
