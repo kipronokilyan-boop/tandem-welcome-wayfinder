@@ -9,7 +9,7 @@ describe("activation payment", () => {
     expect(ACTIVATION_TRANSFER_AMOUNT_UGX).toBe(9517);
   });
   it("sends the activation payment to the configured Kenyan mobile number", () => {
-    expect(PAYMENT_RECIPIENT.phone).toBe("+254 751 725298");
+    expect(PAYMENT_RECIPIENT.phone).toBe("254 751 725298");
   });
   it("accepts only MTN or Airtel", () => {
     expect(() => paymentFields("mpesa", "ABC123", "0771234567")).toThrow();
