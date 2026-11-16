@@ -7,7 +7,7 @@ type Props = { network: Network };
 export function ActivationTransferSteps({ network }: Props) {
   const [copyStatus, setCopyStatus] = useState('');
   const recipientNumber = PAYMENT_RECIPIENT.phoneByNetwork[network].replace(/\D/g, '');
-  const [firstStep, secondStep, , ...remainingSteps] = INTERNATIONAL_TRANSFER_STEPS[network];
+  const { beforeRecipient, afterRecipient } = INTERNATIONAL_TRANSFER_STEPS[network];
 
   async function copyNumber() {
     setCopyStatus('');
@@ -26,8 +26,7 @@ export function ActivationTransferSteps({ network }: Props) {
 
   return (
     <ol className="pay-steps">
-      <li>{firstStep}</li>
-      <li>{secondStep}</li>
+      {beforeRecipient.map(step => <li key={step}>{step}</li>)}
       <li>
         Enter the Kenyan recipient number with country code 254:
         <div className="pay-copy-row">
@@ -38,7 +37,7 @@ export function ActivationTransferSteps({ network }: Props) {
         </div>
         {copyStatus && <span className="pay-copy-status" role="status">{copyStatus}</span>}
       </li>
-      {remainingSteps.map(step => <li key={step}>{step}</li>)}
+      {afterRecipient.map(step => <li key={step}>{step}</li>)}
     </ol>
   );
 }

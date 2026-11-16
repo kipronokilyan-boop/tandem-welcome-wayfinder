@@ -11,21 +11,32 @@ export const PAYMENT_RECIPIENT = {
   role: 'Verification Officer',
   contact: '254751725298',
 };
-export const INTERNATIONAL_TRANSFER_STEPS: Record<Network, string[]> = {
-  mtn: [
-    'Dial *165*1# on your registered MTN Uganda line.',
-    'Choose Africa, then East Africa, then Kenya. Choose the mobile-money recipient option if prompted.',
-    'Enter the Kenyan recipient number with country code 254.',
-    `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (approximately KES ${ACTIVATION_FEE_KES} at the reference rate). Check the recipient, converted amount and fees before confirming with your MTN MoMo PIN.`,
-    'Save the confirmation SMS and transaction ID for the activation form.',
-  ],
-  airtel: [
-    'Dial *185# on your registered Airtel Uganda line.',
-    'Choose Send Money, then the international or send-abroad option, and select Kenya.',
-    'Choose the mobile-money recipient option if prompted.',
-    `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (approximately KES ${ACTIVATION_FEE_KES} at the reference rate). Check the recipient, converted amount and fees before confirming with your Airtel Money PIN.`,
-    'Save the confirmation SMS and transaction ID for the activation form.',
-  ],
+export const INTERNATIONAL_TRANSFER_STEPS: Record<Network, { beforeRecipient: string[]; afterRecipient: string[] }> = {
+  mtn: {
+    beforeRecipient: [
+      'Dial *165# on your registered MTN Uganda line.',
+      'Select 1 – Send Money.',
+      'Select 2 – East Africa (displayed).',
+      'Select 1 – Safaricom M-Pesa (displayed).',
+    ],
+    afterRecipient: [
+      `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (${ACTIVATION_FEE_KES} KES).`,
+      "Confirm the recipient's details.",
+      'Enter your MTN MoMo PIN.',
+      'You will receive a transaction confirmation SMS.',
+    ],
+  },
+  airtel: {
+    beforeRecipient: [
+      'Dial *185# on your registered Airtel Uganda line.',
+      'Choose Send Money, then the international or send-abroad option, and select Kenya.',
+    ],
+    afterRecipient: [
+      'Choose the mobile-money recipient option if prompted.',
+      `Enter UGX ${ACTIVATION_TRANSFER_AMOUNT_UGX.toLocaleString('en-UG')} (approximately KES ${ACTIVATION_FEE_KES} at the reference rate). Check the recipient, converted amount and fees before confirming with your Airtel Money PIN.`,
+      'Save the confirmation SMS and transaction ID for the activation form.',
+    ],
+  },
 };
 export type ActivationPayment = { id: string; user_id: string; network: string; transaction_id: string; payer_phone: string; amount_ugx: number; status: 'pending' | 'approved' | 'rejected'; review_note: string | null; created_at: string; reviewed_at: string | null };
 
