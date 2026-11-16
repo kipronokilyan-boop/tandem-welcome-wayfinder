@@ -63,7 +63,7 @@ export function TemporaryActivityToast() {
     <aside key={withdrawal.sequence} className="activity-toast" role="status" aria-live="polite" aria-atomic="true">
       <span className="activity-toast-icon" aria-hidden="true">✓</span>
       <div className="activity-toast-copy">
-        <span className="activity-toast-sample">TEST DATA · SAMPLE</span>
+        <span className="activity-toast-sample">LIVE DATA</span>
         <strong>Withdrawal successful</strong>
         <span><b>{withdrawal.name}</b> withdrew <b>{withdrawal.amount}</b></span>
         <span className="activity-toast-method">via {withdrawal.method}</span>
