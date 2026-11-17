@@ -14,7 +14,6 @@ import { useEffect, useState, type ReactNode } from "react";
 import type { User } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { MemberContext } from '@/lib/member-auth';
-import { TemporaryActivityToast } from '@/components/temporary-activity-toast';
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -170,7 +169,6 @@ function RootComponent() {
       <MemberContext.Provider value={{ user, ready }}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      {pathname === '/dashboard' && <TemporaryActivityToast />}
       </MemberContext.Provider>
     </QueryClientProvider>
   );

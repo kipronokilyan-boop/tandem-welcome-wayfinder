@@ -59,49 +59,6 @@
 .demo-profile dt { font-size: 12px; color: var(--demo-muted); margin-top: 20px; }
 .demo-profile dd { margin: 6px 0; overflow-wrap: anywhere; }
 
-.activity-toast {
-  position: fixed;
-  z-index: 1100;
-  left: max(1.25rem, env(safe-area-inset-left));
-  bottom: max(1.25rem, env(safe-area-inset-bottom));
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  width: min(22rem, calc(100vw - 2rem));
-  padding: 0.9rem 1rem;
-  border: 1px solid oklch(0.78 0.13 155);
-  border-radius: 0.9rem;
-  background: oklch(0.97 0.035 155);
-  color: oklch(0.26 0.055 160);
-  box-shadow: 0 12px 32px rgb(0 0 0 / 22%);
-  animation: activity-toast-enter 220ms ease-out both;
-}
-.activity-toast-icon {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 50%;
-  background: oklch(0.48 0.14 155);
-  color: white;
-  font-weight: 900;
-}
-.activity-toast-copy { display: grid; gap: 0.1rem; font-size: 0.8rem; line-height: 1.35; }
-.activity-toast-copy strong { font-size: 0.9rem; }
-.activity-toast-copy b { font-variant-numeric: tabular-nums; }
-.activity-toast-sample { color: oklch(0.36 0.1 155); font-size: 0.63rem; font-weight: 900; letter-spacing: 0.08em; }
-.activity-toast-method { color: oklch(0.4 0.04 160); font-size: 0.72rem; }
-@keyframes activity-toast-enter {
-  from { opacity: 0; transform: translateY(0.5rem); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 640px) {
-  .activity-toast { left: max(0.75rem, env(safe-area-inset-left)); bottom: calc(5.5rem + env(safe-area-inset-bottom)); width: min(20rem, calc(100vw - 1.5rem)); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .activity-toast { animation: none; }
-}
 
 /*
  * Design system definition.
